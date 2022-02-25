@@ -10,21 +10,26 @@
     <div class="max-w-screen-lg mx-auto">
 
     <nav class="sticky p-4 top-0 z-50
-                grid grid-cols-3 justify-center justify-items-center bg-white
+                flex flex-row justify-between bg-white
                 border-b-2">
         <div class="justify-self-start justify-center grid rounded p-2 ">
             <h1 class="m-auto font-bold text-blue-900">LOGO</h1>
         </div>
 
-        <div class="grid grid-cols-3">
-            <div class="p-2 grid text-gray-500 font-medium rounded-l
-                        hover:text-gray-900 hover:bg-gray">
-                <a class="m-auto" href="index.html"> Компания </a>
+        <div class="grid grid-cols-4">
+            <div class="p-2 grid text-gray-500 font-medium rounded-l w-28
+                        hover:text-gray-900 hover:bg-gray-100">
+                <a class="m-auto" href="index.html"> Главная </a>
             </div>
-            <div class="p-2 grid text-blue-800 bg-gray-200 font-semibold">
-                <a class="m-auto"> Каталог </a>
+            <div class="p-2 grid text-blue-800 w-28
+                        bg-gray-100 font-semibold">
+                <a class="m-auto"> Станки </a>
             </div>
-            <div class="p-2 grid text-gray-500 font-medium
+            <div class="p-2 grid text-gray-500 w-28
+                        hover:bg-gray-100 hover:text-gray-900">
+                <a class="m-auto" href="#"> Пилы </a>
+            </div>
+            <div class="p-2 grid text-gray-500 w-28 font-medium
                         hover:text-gray-900 hover:bg-gray-100 rounded-r">
                 <a class="m-auto" href="contacts.html"> Контакты </a>
             </div>
@@ -34,13 +39,17 @@
                     font-semibold text-gray-100
                     divide-x divide-blue-800
                     display-hidden md:display-block ring-1
-                    ring-blue-800 rounded">
-            <div class="grid p-2 rounded-l text-neutral-700
-                        hover:bg-blue-100">
+                    ring-blue-800 rounded bg-blue-800">
+            <div class="grid p-2 rounded-l text-gray-700
+                        bg-blue-800 text-white hover:bg-blue-900">
+                <a class="m-auto" href="#">Заказать</a>
+            </div>
+            <div class="grid p-2 rounded-l text-gray-700
+                        bg-white hover:bg-blue-100">
                 <a class="m-auto" href="#">+12345678910</a>
             </div>
-            <div class="grid p-2 rounded-r text-neutral-700
-                        hover:bg-blue-100">
+            <div class="grid p-2 rounded-r text-gray-700
+                        bg-white hover:bg-blue-100">
                 <a class="m-auto" href="#">1234@gmail.com</a>
             </div>
         </div>
@@ -90,7 +99,9 @@
     <div class="bg-white m-2 flex flex-row flex-wrap justify-start">
         <div class="border flex-none bg-white p-2 m-2 h-min w-80 rounded
                     hover:border-blue-500">
-            <img src="chenlong-product-1.jpg" href="#" class="h-max mx-auto mb-2">
+            <a href="/src/item.html">
+                <img src="chenlong-product-1.jpg" class="h-max mx-auto mb-2">
+            </a>
             <hr>
             <div class="p-2">
                 <h3 class="mb-1.5 font-semibold text-gray-800 text-l">Именование</h3>
@@ -100,7 +111,7 @@
                     <li>Факт 3</li>
                 </ul>
                 <a class="font-medium text-blue-800
-                          hover:underline hover:text-blue-900" href="#">
+                          hover:underline hover:text-blue-900" href="/src/item.html">
                     Подробнее ⇀
                 </a>
             </div>
