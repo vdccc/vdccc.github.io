@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/main.css" rel="stylesheet">
+  <script src="/dist/main.js" defer></script>
+</head>
+<body class="h-screen">
+
+    <div class="max-w-screen-lg mx-auto">
+
+    <nav class="sticky p-4 top-0 z-50
+            flex flex-row justify-between bg-white
+            border-b-2">
+    <div class="justify-self-start justify-center grid rounded p-2 ">
+        <h1 class="m-auto font-bold text-blue-900">LOGO</h1>
+    </div>
+
+    <!-- text-blue-800 bg-gray-100 font-semibold -->
+    <!-- text-gray-500 hover:text-gray-900 hover:bg-gray-100 -->
+
+    
+    
+
+    <div class="grid grid-cols-4">
+        <div class="p-2 grid w-28 rounded-l
+                    
+                        text-gray-500 hover:text-gray-900 hover:bg-gray-100
+                    ">
+            <a class="m-auto" href="/dist"> Главная </a>
+        </div>
+        <div class="p-2 grid w-28
+                    
+                        text-gray-500 hover:text-gray-900 hover:bg-gray-100
+                    ">
+            <a class="m-auto" href="/dist/catalog-1"> Станки </a>
+        </div>
+        <div class="p-2 grid w-28
+                    
+                        text-gray-500 hover:text-gray-900 hover:bg-gray-100
+                    ">
+            <a class="m-auto" href="/dist/catalog-2"> Пилы </a>
+        </div>
+        <div class="p-2 grid w-28 rounded-r
+                    
+                        text-gray-500 hover:text-gray-900 hover:bg-gray-100
+                    ">
+            <a class="m-auto" href="/dist/contacts"> Контакты </a>
+        </div>
+    </div>
+
+    <div class="justify-self-end hidden
+                md:flex flex-row
+                font-semibold text-gray-100
+                divide-x divide-blue-800 ring-1
+                ring-blue-800 rounded bg-blue-800">
+        <div class="grid p-2 rounded-l text-gray-700
+                    bg-blue-800 text-white hover:bg-blue-900">
+
+            <div x-data="{ modal: false }" class="grid">
+                <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
+
+                    <div @click="" class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen w-2/5 h-2/5">
+                        <div class="flex flex-col justify-between h-full w-full">
+                            <label class="text-gray-700 m-2">Почта</label>
+                            <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+                            <label class="text-gray-700 m-2">Сообщение</label>
+                            <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
+
+                            <div class="pt-5 flex flex-row justify-end">
+                                <button @click="modal=false" class="p-2.5 w-32 mr-5 text-gray-500 rounded hover:text-blue-900 hover:bg-gray-100">Отмена</button>
+                                <button @click="modal=false" class="p-2.5 w-32 mr-2 font-semibold text-white bg-blue-800 rounded hover:bg-blue-900">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="m-auto" href="#" @click="modal=!modal">Заказать</a>
+            </div> <!-- modal end -->
+
+        </div>
+        <div class="grid p-2 rounded-l text-gray-700
+                    bg-white hover:bg-blue-100">
+            <a class="m-auto" href="#">+12345678910</a>
+        </div>
+        <div class="grid p-2 rounded-r text-gray-700
+                    bg-white hover:bg-blue-100">
+            <a class="m-auto" href="#">1234@gmail.com</a>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="m-5 p-5 pl-10 pb-10 border-b-2">
+        <h1 class="text-gray-800 font-bold text-3xl pb-1.5">
+            Item No.：CH-300SA
+        </h1>
+        <div class="flex flex-row">
+            <a class="text-gray-600 font-medium hover:underline"
+               href="/dist">
+                Главная
+            </a>
+            <h3 class="mx-5 text-blue-600">≻</h3>
+            <a class="text-gray-600 hover:underline" href="/dist/catalog-1">
+                Каталог станков
+            </a>
+            <h3 class="mx-5 text-blue-600">≻</h3>
+            <h1 class="text-gray-600">
+                Item No.：CH-300SA
+            </h1>
+        </div>
+    </div>
+
+    <div class="p-5 flex-1">
+        <div class="flex justify-between flex-col md:flex-row">
+
+            <div class="flex-none md:w-2/5 flex flex-col">
+                <div x-data="{ modal: false }" class="p-2">
+                    <div class="p-2">
+                        
+                        <div x-data="{ popup: false }">
+    <div @click="popup=false" x-show="popup" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
+        <div class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen h-max w-max">
+            <img class="border" src="/dist/pics/product-25-0.jpg"></img>
+        </div>
+    </div>
+    <img @click="popup=true" class="cursor-pointer hover:border-blue-900 border" src="/dist/pics/product-25-0.jpg"></img>
+</div>
+
+                    </div>
+                </div>
+
+                <div class="flex-auto grid grid-cols-2">
+                    
+                    
+                        <div class="p-2">
+                            <div x-data="{ popup: false }">
+    <div @click="popup=false" x-show="popup" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
+        <div class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen h-max w-max">
+            <img class="border" src="/dist/pics/product-25-0.jpg"></img>
+        </div>
+    </div>
+    <img @click="popup=true" class="cursor-pointer hover:border-blue-900 border" src="/dist/pics/product-25-0.jpg"></img>
+</div>
+
+                        </div>
+                    
+                </div>
+            </div>
+
+            <div class="p-5 flex-auto flex flex-col">
+                <div class="flex-1">
+                    <p class="font-medium text-gray-800 text-lg">
+                        Veritatis quas ullam sapiente aut vero aliquam quam. Voluptate nesciunt vitae quas quia est ea perspiciatis. Quibusdam doloribus et recusandae. Aut facilis qui voluptatum quia nostrum. Ex soluta ut ipsam.
+                    </p>
+                </div>
+
+                <div class="flex-none"
+                     x-data="{ open: false }">
+
+                    <div class="flex flex-row bg-gray-200 p-5" @click="open=!open">
+                        <h2 class="font-semibold text-medium mr-2 text-gray-600">
+                            ▼
+                        </h2>
+                        <h2 class="font-semibold text-xl text-gray-600">
+                            Документация
+                        </h2>
+                    </div>
+
+                    <p x-show="open" x-transition class="rounded-b border border-gray-200 p-2 bg-white font-medium text-gray-600">
+                        Veritatis quas ullam sapiente aut vero aliquam quam. Voluptate nesciunt vitae quas quia est ea perspiciatis. Quibusdam doloribus et recusandae. Aut facilis qui voluptatum quia nostrum. Ex soluta ut ipsam.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white">
+        <footer class="p-3 bg-gray-200 flex flex-col md:flex-row gap-5">
+    <div class="flex-0 p-2">
+        <div class="w-40 h-40 rounded-xl bg-blue-100 grid">
+            <h1 class="font-bold text-blue-900 m-auto text-2xl">LOGO</h1>
+        </div>
+    </div>
+
+    <div class="flex-auto p-2">
+        <div>
+            <h1 class="font-semibold text-blue-800">Контакты</h1>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="#">+1234567890</a>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="#">+0987654321</a>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="#">qwertyu@qwerty.com</a>
+        </div>
+    </div>
+
+    <div class="flex-auto p-2">
+        <div>
+            <h1 class="font-semibold text-blue-800
+                       hover:border-b-2">Продукция</h1>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="/dist/catalog-1">Ленточные пилы</a>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="/dist/catalog-2">Станки с ЧПУ</a>
+        </div>
+    </div>
+</footer>
+
+    </div>
+
+    </div>
+
+
+</body>
+</html>
