@@ -6,7 +6,7 @@
   <link href="/dist/main.css" rel="stylesheet">
   <script src="/dist/main.js" defer></script>
 </head>
-<body class="h-screen bg-white overflow-y-scroll">
+<body class="h-screen w-screen bg-white overflow-y-scroll overflow-x-hidden">
 
     <div class="max-w-screen-lg mx-auto">
 
@@ -23,7 +23,7 @@
     
     
 
-    <div class="grid grid-cols-4">
+    <div class="hidden md:grid grid-cols-4">
         <div class="p-2 grid w-28 rounded-l
                     
                         text-blue-800 bg-gray-100 font-semibold
@@ -89,6 +89,56 @@
             <a class="m-auto" href="#">1234@gmail.com</a>
         </div>
     </div>
+
+
+    <!-- phone menu -->
+    <div x-data="{ slideOut: false }" class="box md:hidden">
+        <button @click="slideOut = !slideOut"
+            class="p-3 text-white bg-blue-800 rounded">
+            Больше ->
+        </button>
+
+        <div x-show="slideOut"
+            x-transition.opacity
+            class="fixed inset-0 bg-black/25"></div>
+
+        <div
+            x-show="slideOut"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="translate-x-full"
+            x-transition:enter-end="translate-x-0"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="translate-x-0"
+            x-transition:leave-end="translate-x-full"
+            @click.away="slideOut = false"
+            class="fixed inset-y-0 right-0 z-50 w-screen max-w-xs
+                    bg-white border-l-2 flex-col divide-y divide-gray-200">
+
+
+            <a href="/dist">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Главная
+                </div>
+            </a>
+            <a href="/dist/catalog-1">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Станки
+                </div>
+            </a>
+            <a href="/dist/catalog-2">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Пилы
+                </div>
+            </a>
+            <a href="/dist/contacts">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Контакты
+                </div>
+            </a>
+
+        </div>
+    </div>
+
 </nav>
 
 
@@ -96,8 +146,8 @@
         <section class="mx-auto mb-5 mt-5">
             <div class="flex flex-col md:flex-row">
                 <article class="p-5 md:my-auto bg-white md:ml-10 w-full md:w-3/5">
-                    <h3 class="text-4xl font-semibold text-gray-800">Ленточнопильные станки</h3>
-                    <h2 class="text-5xl font-semibold text-gray-800">CHENLONG-HEAVY</h2>
+                    <h3 class="text-2xl md:text-4xl font-semibold text-gray-800">Ленточнопильные станки</h3>
+                    <h2 class="text-3xl md:text-5xl font-semibold text-gray-800">CHENLONG-HEAVY</h2>
                     <hr class="my-2">
                     <p class="text-lg text-gray-600">
                         Надёжная продукция по выгодным ценам.
@@ -129,10 +179,10 @@
         </section>
 
         <section class="p-5">
-            <div class="bg-blue-100 px-5 py-5 rounded-xl bg-cover" style="background-image: url(/dist/pics/chenlong-bg.jpg);">
+            <div class="bg-blue-100 p-5 rounded-xl bg-cover" style="background-image: url(/dist/pics/chenlong-bg.jpg);">
                 <div class="grid backdrop-blur-sm backdrop-brightness-75
-                            rounded-xl w-max h-min p-10">
-                    <h1 class="text-6xl my-auto text-gray-100 font-semibold">
+                            rounded-xl w-max h-min p-2 md:p-10">
+                    <h1 class="text-xl md:text-6xl my-auto text-gray-100 font-semibold">
                        Ленточнопильные станки <br> CHENLONG-HEAVY
                     </h1>
                     <a href="/dist/categories" class="hover:underline text-white text-xl my-auto font-semibold">
@@ -162,9 +212,8 @@
             </p>
         </section>
 
-        <section class="p-5 grid grid-cols-2">
-
-            <div class="m-2 flex flex-row bg-white rounded-xl">
+        <section class="p-5 grid grid-cols-1 md:grid-cols-2">
+            <div class="m-2 flex flex-col md:flex-row bg-white rounded-xl">
                 <div class="h-44 w-44 flex-none border border-white hover:border-blue-600">
                     <a href="/dist/product-1">
                         <img src="/dist/pics/product-0-0.jpg">
@@ -188,7 +237,7 @@
                     </p>
                 </div>
             </div>
-            <div class="m-2 flex flex-row bg-white rounded-xl">
+            <div class="m-2 flex flex-col md:flex-row bg-white rounded-xl">
                 <div class="h-44 w-44 flex-none border border-white hover:border-blue-600">
                     <a href="/dist/product-1">
                         <img src="/dist/pics/product-0-0.jpg">
@@ -212,7 +261,7 @@
                     </p>
                 </div>
             </div>
-            <div class="m-2 flex flex-row bg-white rounded-xl">
+            <div class="m-2 flex flex-col md:flex-row bg-white rounded-xl">
                 <div class="h-44 w-44 flex-none border border-white hover:border-blue-600">
                     <a href="/dist/product-1">
                         <img src="/dist/pics/product-0-0.jpg">
@@ -236,7 +285,7 @@
                     </p>
                 </div>
             </div>
-            <div class="m-2 flex flex-row bg-white rounded-xl">
+            <div class="m-2 flex flex-col md:flex-row bg-white rounded-xl">
                 <div class="h-44 w-44 flex-none border border-white hover:border-blue-600">
                     <a href="/dist/product-1">
                         <img src="/dist/pics/product-0-0.jpg">
@@ -265,8 +314,8 @@
         <section class="p-5">
             <div class="bg-blue-100 px-5 py-5 rounded-xl bg-cover" style="background-image: url(/dist/pics/bxtool-bg.jpg);">
                 <div class="grid backdrop-blur-sm backdrop-brightness-90
-                            rounded-xl w-min h-min p-10">
-                    <h1 class="text-7xl my-auto text-gray-100 font-semibold">
+                            rounded-xl w-min h-min p-2 md:p-10">
+                    <h1 class="text-5xl md:text-7xl my-auto text-gray-100 font-semibold">
                         Ленточные Пилы
                     </h1>
                 </div>
@@ -275,14 +324,14 @@
 
         <section class="p-5">
             <div class="flex flex-col">
-                <div class="p-5 flex flex-row">
-                    <div class="p-5">
+                <div class="p-5 flex flex-col md:flex-row">
+                    <div class="md:p-5">
                         <h3 class="font-semibold text-gray-800">Ленточные пилы</h3>
                         <hr class="my-2">
-                        <p class="font-medium text-gray-800">
+                        <p class="text-gray-700">
                             &emsp; Для распиловки металлов по заданным параметрам лучше всего подходят ленточные пилы по металлу.
                         </p>
-                        <p class="font-medium text-gray-800 mt-2">
+                        <p class="text-gray-700 mt-2">
                             &emsp; Эффективность и качество резки в первую очередь зависят от корректного выбора ленточного полотна пилы.
                         </p>
                     </div>
@@ -292,30 +341,32 @@
             </div>
         </section>
 
-        <section class="p-10 pb-20 flex flex-row justify-around">
+        <section class="p-2 md:p-10 pb-20 flex flex-col md:flex-row justify-around">
             <div>
-                <h1 class="text-gray-800 text-2xl font-semibold p-5">Остались вопросы?</h1>
+                <h1 class="text-gray-800 text-2xl font-semibold p-5 hidden md:box">Остались вопросы?</h1>
             </div>
 
-            <div x-data="{ modal2: false }" class="grid">
-                <div x-show="modal2" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
+            <div x-data="{ modal: false }" class="grid">
 
-                    <div @click="" class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen w-2/5 h-2/5">
-                        <div class="flex flex-col justify-between h-full w-full">
-                            <label class="text-gray-700 m-2">Почта</label>
-                            <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
-                            <label class="text-gray-700 m-2">Сообщение</label>
-                            <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
+                <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-auto h-auto md:w-2/5 md:h-2/5">
+        <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
+            <label class="text-gray-700 m-2">Почта</label>
+            <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Сообщение</label>
+            <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
 
-                            <div class="pt-5 flex flex-row justify-end">
-                                <button @click="modal2=false" class="p-2.5 w-32 mr-5 text-gray-500 rounded hover:text-blue-900 hover:bg-gray-100">Отмена</button>
-                                <button @click="modal2=false" class="p-2.5 w-32 mr-2 font-semibold text-white bg-blue-800 rounded hover:bg-blue-900">Отправить</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="pt-5 flex flex-row justify-end">
+                <button @click="modal=false" class="p-2.5 w-32 mr-5 text-gray-500 rounded hover:text-blue-900 hover:bg-gray-100">Отмена</button>
+                <button @click="modal=false" class="p-2.5 w-32 mr-2 font-semibold text-white bg-blue-800 rounded hover:bg-blue-900">Отправить</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-                <a class="rounded bg-blue-800 hover:bg-blue-900 text-white p-5 m-auto text-semibold text-2xl cursor-pointer" @click="modal2=!modal2">Заказать звонок</a>
+
+                <a class="rounded bg-blue-800 hover:bg-blue-900 text-white p-5 m-auto text-semibold text-2xl cursor-pointer"
+                   @click="modal=!modal">Заказать звонок</a>
             </div> <!-- modal end -->
         </section>
 

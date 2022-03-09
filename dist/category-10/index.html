@@ -23,7 +23,7 @@
     
     
 
-    <div class="grid grid-cols-4">
+    <div class="hidden md:grid grid-cols-4">
         <div class="p-2 grid w-28 rounded-l
                     
                         text-gray-500 hover:text-gray-900 hover:bg-gray-100
@@ -89,6 +89,56 @@
             <a class="m-auto" href="#">1234@gmail.com</a>
         </div>
     </div>
+
+
+    <!-- phone menu -->
+    <div x-data="{ slideOut: false }" class="box md:hidden">
+        <button @click="slideOut = !slideOut"
+            class="p-3 text-white bg-blue-800 rounded">
+            Больше ->
+        </button>
+
+        <div x-show="slideOut"
+            x-transition.opacity
+            class="fixed inset-0 bg-black/25"></div>
+
+        <div
+            x-show="slideOut"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="translate-x-full"
+            x-transition:enter-end="translate-x-0"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="translate-x-0"
+            x-transition:leave-end="translate-x-full"
+            @click.away="slideOut = false"
+            class="fixed inset-y-0 right-0 z-50 w-screen max-w-xs
+                    bg-white border-l-2 flex-col divide-y divide-gray-200">
+
+
+            <a href="/dist">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Главная
+                </div>
+            </a>
+            <a href="/dist/catalog-1">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Станки
+                </div>
+            </a>
+            <a href="/dist/catalog-2">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Пилы
+                </div>
+            </a>
+            <a href="/dist/contacts">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Контакты
+                </div>
+            </a>
+
+        </div>
+    </div>
+
 </nav>
 
 
