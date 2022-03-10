@@ -437,29 +437,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-50 {
   z-index: 50;
 }
-.m-5 {
-  margin: 1.25rem;
-}
 .m-auto {
   margin: auto;
 }
 .m-2 {
   margin: 0.5rem;
 }
-.m-10 {
-  margin: 2.5rem;
+.m-5 {
+  margin: 1.25rem;
 }
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 .my-5 {
   margin-top: 1.25rem;
@@ -542,6 +539,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-2\/5 {
   height: 40%;
 }
+.h-5 {
+  height: 1.25rem;
+}
+.w-min {
+  width: min-content;
+}
 .w-screen {
   width: 100vw;
 }
@@ -556,9 +559,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-44 {
   width: 11rem;
-}
-.w-min {
-  width: min-content;
 }
 .w-96 {
   width: 24rem;
@@ -580,6 +580,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-2\/5 {
   width: 40%;
+}
+.w-5 {
+  width: 1.25rem;
 }
 .max-w-screen-lg {
   max-width: 1024px;
@@ -772,14 +775,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-2 {
   padding: 0.5rem;
 }
+.p-4 {
+  padding: 1rem;
+}
 .p-2\.5 {
   padding: 0.625rem;
 }
 .p-3 {
   padding: 0.75rem;
-}
-.p-4 {
-  padding: 1rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -990,6 +993,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 @media (min-width: 768px) {
 
+  .md\:m-5 {
+    margin: 1.25rem;
+  }
+
+  .md\:m-10 {
+    margin: 2.5rem;
+  }
+
+  .md\:mx-5 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
   .md\:my-auto {
     margin-top: auto;
     margin-bottom: auto;
@@ -1020,6 +1036,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 40%;
   }
 
+  .md\:w-max {
+    width: max-content;
+  }
+
   .md\:w-3\/5 {
     width: 60%;
   }
@@ -1042,6 +1062,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:p-5 {
     padding: 1.25rem;
+  }
+
+  .md\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
+  .md\:pb-10 {
+    padding-bottom: 2.5rem;
   }
 
   .md\:text-4xl {

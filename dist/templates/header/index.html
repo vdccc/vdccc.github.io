@@ -81,10 +81,11 @@
 
     <!-- phone menu -->
     <div x-data="{ slideOut: false }" class="box md:hidden">
-        <button @click="slideOut = !slideOut"
+
+        <div @click="slideOut = !slideOut"
             class="p-3 text-white bg-blue-800 rounded">
-            Больше ->
-        </button>
+            <img class="w-5 h-5" src="/dist/left-shevron.svg">
+        </div>
 
         <div x-show="slideOut"
             x-transition.opacity
@@ -108,7 +109,7 @@
                     Главная
                 </div>
             </a>
-            <a href="/dist/catalog-1">
+            <a href="/dist/categories">
                 <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
                     Станки
                 </div>

@@ -93,10 +93,11 @@
 
     <!-- phone menu -->
     <div x-data="{ slideOut: false }" class="box md:hidden">
-        <button @click="slideOut = !slideOut"
+
+        <div @click="slideOut = !slideOut"
             class="p-3 text-white bg-blue-800 rounded">
-            Больше ->
-        </button>
+            <img class="w-5 h-5" src="/dist/left-shevron.svg">
+        </div>
 
         <div x-show="slideOut"
             x-transition.opacity
@@ -120,7 +121,7 @@
                     Главная
                 </div>
             </a>
-            <a href="/dist/catalog-1">
+            <a href="/dist/categories">
                 <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
                     Станки
                 </div>
@@ -142,21 +143,20 @@
 </nav>
 
 
-    <div class="m-5 p-5 ml-10 border-b-2">
+    <div class="md:m-5 p-5 md:ml-10 border-b-2">
         <h1 class="text-gray-800 font-bold text-3xl pb-1.5">
             Automatic double-column horizontal corner metal band sawing machine
         </h1>
         <div class="flex flex-row">
-            <a class="text-gray-600 font-medium hover:underline"
-               href="/dist">
+            <a class="text-gray-600 font-medium hover:underline" href="/dist">
                 Главная
             </a>
-            <h3 class="mx-5 text-blue-600">≻</h3>
-            <a href="/dist/categories" class="hover:underline text-gray-600">
+            <h3 class="mx-2 md:mx-5 text-blue-600">≻</h3>
+            <a href="/dist/categories" class="hover:underline w-min md:w-max font-medium text-gray-600">
                 Каталог станков
             </a>
-            <h3 class="mx-5 text-blue-600">≻</h3>
-            <h1 class="text-gray-600">
+            <h3 class="mx-2 md:mx-5 text-blue-600">≻</h3>
+            <h1 class="text-gray-600 font-medium w-min md:w-max">
                 Automatic double-column horizontal corner metal band sawing machine
             </р1>
         </div>

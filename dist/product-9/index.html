@@ -93,10 +93,11 @@
 
     <!-- phone menu -->
     <div x-data="{ slideOut: false }" class="box md:hidden">
-        <button @click="slideOut = !slideOut"
+
+        <div @click="slideOut = !slideOut"
             class="p-3 text-white bg-blue-800 rounded">
-            Больше ->
-        </button>
+            <img class="w-5 h-5" src="/dist/left-shevron.svg">
+        </div>
 
         <div x-show="slideOut"
             x-transition.opacity
@@ -120,7 +121,7 @@
                     Главная
                 </div>
             </a>
-            <a href="/dist/catalog-1">
+            <a href="/dist/categories">
                 <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
                     Станки
                 </div>
@@ -142,7 +143,7 @@
 </nav>
 
 
-    <div class="m-5 p-5 pl-10 pb-10 border-b-2">
+    <div class="md:m-5 p-5 md:pl-10 md:pb-10 border-b-2">
         <h1 class="text-gray-800 font-bold text-3xl pb-1.5">
             G4230/50
         </h1>
@@ -152,19 +153,18 @@
                 Главная
             </a>
             <h3 class="mx-5 text-blue-600">≻</h3>
-            <a class="text-gray-600 hover:underline" href="/dist/catalog-1">
+            <a class="text-gray-600 font-medium w-min md:w-max hover:underline" href="/dist/catalog-1">
                 Каталог станков
             </a>
             <h3 class="mx-5 text-blue-600">≻</h3>
-            <h1 class="text-gray-600">
+            <h1 class="text-gray-600 font-medium w-min md:w-max">
                 G4230/50
             </h1>
         </div>
     </div>
 
-    <div class="p-5 flex-1">
+    <div class="md:p-5 flex-1">
         <div class="flex justify-between flex-col md:flex-row">
-
             <div class="flex-none md:w-2/5 flex flex-col">
                 <div x-data="{ modal: false }" class="p-2">
                     <div class="p-2">
@@ -184,7 +184,7 @@
                 <div class="flex-auto grid grid-cols-2">
                     
                     
-                        <div class="p-2">
+                        <div class="p-4">
                             <div x-data="{ popup: false }">
     <div @click="popup=false" x-show="popup" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
         <div class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen h-max w-max">
@@ -197,7 +197,7 @@
                         </div>
                     
                     
-                        <div class="p-2">
+                        <div class="p-4">
                             <div x-data="{ popup: false }">
     <div @click="popup=false" x-show="popup" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
         <div class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen h-max w-max">
@@ -210,7 +210,7 @@
                         </div>
                     
                     
-                        <div class="p-2">
+                        <div class="p-4">
                             <div x-data="{ popup: false }">
     <div @click="popup=false" x-show="popup" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
         <div class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen h-max w-max">
@@ -223,7 +223,7 @@
                         </div>
                     
                     
-                        <div class="p-2">
+                        <div class="p-4">
                             <div x-data="{ popup: false }">
     <div @click="popup=false" x-show="popup" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
         <div class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen h-max w-max">
@@ -236,7 +236,7 @@
                         </div>
                     
                     
-                        <div class="p-2">
+                        <div class="p-4">
                             <div x-data="{ popup: false }">
     <div @click="popup=false" x-show="popup" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
         <div class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen h-max w-max">
@@ -249,7 +249,7 @@
                         </div>
                     
                     
-                        <div class="p-2">
+                        <div class="p-4">
                             <div x-data="{ popup: false }">
     <div @click="popup=false" x-show="popup" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
         <div class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen h-max w-max">
@@ -265,8 +265,8 @@
             </div>
 
             <div class="p-5 flex-auto flex flex-col">
-                <div class="flex-1">
-                    <p class="font-medium text-gray-800 text-lg">
+                <div class="flex-1 pb-5">
+                    <p class="text-gray-700 text-lg">
                         Veritatis quas ullam sapiente aut vero aliquam quam. Voluptate nesciunt vitae quas quia est ea perspiciatis. Quibusdam doloribus et recusandae. Aut facilis qui voluptatum quia nostrum. Ex soluta ut ipsam.
                     </p>
                 </div>
@@ -283,7 +283,7 @@
                         </h2>
                     </div>
 
-                    <p x-show="open" x-transition class="rounded-b border border-gray-200 p-2 bg-white font-medium text-gray-600">
+                    <p x-show="open" x-transition class="rounded-b border border-gray-200 p-2 bg-white text-gray-700">
                         Veritatis quas ullam sapiente aut vero aliquam quam. Voluptate nesciunt vitae quas quia est ea perspiciatis. Quibusdam doloribus et recusandae. Aut facilis qui voluptatum quia nostrum. Ex soluta ut ipsam.
                     </p>
                 </div>
