@@ -34,7 +34,7 @@
                     
                         text-blue-800 bg-gray-100 font-semibold
                     ">
-            <a class="m-auto" href="/dist/catalog-1"> Станки </a>
+            <a class="m-auto" href="/dist/categories"> Станки </a>
         </div>
         <div class="p-2 grid w-28
                     
@@ -59,22 +59,22 @@
                     bg-blue-800 text-white hover:bg-blue-900">
 
             <div x-data="{ modal: false }" class="grid">
+
                 <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-2/5">
+        <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
+            <label class="text-gray-700 m-2">Почта</label>
+            <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Сообщение</label>
+            <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
+            <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
+                <button @click="modal=false" class="p-2.5 basis-32 mr-5 text-gray-500 rounded hover:text-blue-900 hover:bg-gray-100">Отмена</button>
+                <button @click="modal=false" class="p-2.5 basis-32 mr-2 font-semibold text-white bg-blue-800 rounded hover:bg-blue-900">Отправить</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-                    <div @click="" class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen w-2/5 h-2/5">
-                        <div class="flex flex-col justify-between h-full w-full">
-                            <label class="text-gray-700 m-2">Почта</label>
-                            <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
-                            <label class="text-gray-700 m-2">Сообщение</label>
-                            <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
-
-                            <div class="pt-5 flex flex-row justify-end">
-                                <button @click="modal=false" class="p-2.5 w-32 mr-5 text-gray-500 rounded hover:text-blue-900 hover:bg-gray-100">Отмена</button>
-                                <button @click="modal=false" class="p-2.5 w-32 mr-2 font-semibold text-white bg-blue-800 rounded hover:bg-blue-900">Отправить</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <a class="m-auto" href="#" @click="modal=!modal">Заказать</a>
             </div> <!-- modal end -->
@@ -92,30 +92,28 @@
 
 
     <!-- phone menu -->
-    <div x-data="{ slideOut: false }" class="box md:hidden">
+    <div x-data="{ slide: false }" class="box md:hidden">
 
-        <div @click="slideOut = !slideOut"
+        <div @click="slide=!slide"
             class="p-3 text-white bg-blue-800 rounded">
             <img class="w-5 h-5" src="/dist/left-shevron.svg">
         </div>
 
-        <div x-show="slideOut"
+        <div x-show="slide"
             x-transition.opacity
             class="fixed inset-0 bg-black/25"></div>
 
         <div
-            x-show="slideOut"
+            x-show="slide"
             x-transition:enter="transition ease-out duration-300"
             x-transition:enter-start="translate-x-full"
             x-transition:enter-end="translate-x-0"
             x-transition:leave="transition ease-in duration-300"
             x-transition:leave-start="translate-x-0"
             x-transition:leave-end="translate-x-full"
-            @click.away="slideOut = false"
-            class="fixed inset-y-0 right-0 z-50 w-screen max-w-xs
+            @click.away="slide=false"
+            class="fixed inset-y-0 right-0 z-40 w-screen max-w-xs
                     bg-white border-l-2 flex-col divide-y divide-gray-200">
-
-
             <a href="/dist">
                 <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
                     Главная
@@ -136,31 +134,55 @@
                     Контакты
                 </div>
             </a>
+            <div class="grid m-5 p-5 rounded text-gray-700
+                        bg-blue-800 text-2xl text-white hover:bg-blue-900">
 
+                <div x-data="{ modal: false }" class="grid">
+
+                    <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-2/5">
+        <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
+            <label class="text-gray-700 m-2">Почта</label>
+            <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Сообщение</label>
+            <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
+            <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
+                <button @click="modal=false" class="p-2.5 basis-32 mr-5 text-gray-500 rounded hover:text-blue-900 hover:bg-gray-100">Отмена</button>
+                <button @click="modal=false" class="p-2.5 basis-32 mr-2 font-semibold text-white bg-blue-800 rounded hover:bg-blue-900">Отправить</button>
+            </div>
         </div>
     </div>
+</div>
 
+
+                    <a class="m-auto" href="#" @click="modal=!modal">Заказать звонок</a>
+                </div> <!-- modal end -->
+            </div>
+        </div>
+    </div>
 </nav>
 
 
-    <div class="md:m-5 p-5 md:ml-10 border-b-2">
-        <h1 class="text-gray-800 font-bold text-3xl pb-1.5">
-            Special CNC sawing machine
-        </h1>
-        <div class="flex flex-row">
-            <a class="text-gray-600 font-medium hover:underline" href="/dist">
-                Главная
-            </a>
-            <h3 class="mx-2 md:mx-5 text-blue-600">≻</h3>
-            <a href="/dist/categories" class="hover:underline w-min md:w-max font-medium text-gray-600">
-                Каталог станков
-            </a>
-            <h3 class="mx-2 md:mx-5 text-blue-600">≻</h3>
-            <h1 class="text-gray-600 font-medium w-min md:w-max">
-                Special CNC sawing machine
-            </р1>
+        <div class="md:m-5 md:pb-10 p-5 border-b-2">
+            <div class="md:ml-10">
+                <h1 class="text-gray-800 font-bold text-3xl pb-1.5">
+                    Special CNC sawing machine
+                </h1>
+                <div class="flex flex-row">
+                    <a class="text-gray-600 font-medium hover:underline" href="/dist">
+                        Главная
+                    </a>
+                    <h3 class="mx-2 md:mx-5 text-blue-600">≻</h3>
+                    <a href="/dist/categories" class="hover:underline w-min md:w-max font-medium text-gray-600">
+                        Каталог станков
+                    </a>
+                    <h3 class="mx-2 md:mx-5 text-blue-600">≻</h3>
+                    <h1 class="text-gray-600 font-medium w-min md:w-max">
+                        Special CNC sawing machine
+                    </h1>
+                </div>
+            </div>
         </div>
-    </div>
 
     <div class="bg-white m-2 flex flex-row flex-wrap justify-items-stretch">
         
@@ -170,20 +192,22 @@
             
             
 
-            <div class="border flex-none bg-white p-2 m-2 w-80 rounded hover:border-blue-500">
-    <a href="/dist/product-33">
-        <img src="/dist/pics/product-33-0.jpg" class="h-max mx-auto mb-2">
-    </a>
-    <hr>
-    <div class="p-2">
-        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4260/120/250</h3>
-        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-            Aluminum foam slitting machine
-        </p>
-        <a class="font-medium text-blue-800
-                  hover:underline hover:text-blue-900" href="/dist/product-33">
-            Подробнее ⇀
+            <div class="flex-none max-w-full">
+    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+        <a href="/dist/product-33">
+            <img src="/dist/pics/product-33-0.jpg" class="h-max mx-auto mb-2">
         </a>
+        <hr>
+        <div class="p-2">
+            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4260/120/250</h3>
+            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+                Aluminum foam slitting machine
+            </p>
+            <a class="font-medium text-blue-800
+                      hover:underline hover:text-blue-900" href="/dist/product-33">
+                Подробнее ⇀
+            </a>
+        </div>
     </div>
 </div>
 
@@ -194,20 +218,22 @@
             
             
 
-            <div class="border flex-none bg-white p-2 m-2 w-80 rounded hover:border-blue-500">
-    <a href="/dist/product-34">
-        <img src="/dist/pics/product-34-0.jpg" class="h-max mx-auto mb-2">
-    </a>
-    <hr>
-    <div class="p-2">
-        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5130</h3>
-        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-            Aluminum foam combined vertical band saw
-        </p>
-        <a class="font-medium text-blue-800
-                  hover:underline hover:text-blue-900" href="/dist/product-34">
-            Подробнее ⇀
+            <div class="flex-none max-w-full">
+    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+        <a href="/dist/product-34">
+            <img src="/dist/pics/product-34-0.jpg" class="h-max mx-auto mb-2">
         </a>
+        <hr>
+        <div class="p-2">
+            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5130</h3>
+            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+                Aluminum foam combined vertical band saw
+            </p>
+            <a class="font-medium text-blue-800
+                      hover:underline hover:text-blue-900" href="/dist/product-34">
+                Подробнее ⇀
+            </a>
+        </div>
     </div>
 </div>
 
@@ -218,20 +244,22 @@
             
             
 
-            <div class="border flex-none bg-white p-2 m-2 w-80 rounded hover:border-blue-500">
-    <a href="/dist/product-35">
-        <img src="/dist/pics/product-35-0.jpg" class="h-max mx-auto mb-2">
-    </a>
-    <hr>
-    <div class="p-2">
-        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GZK4240</h3>
-        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-            Sapphire band sawing machine
-        </p>
-        <a class="font-medium text-blue-800
-                  hover:underline hover:text-blue-900" href="/dist/product-35">
-            Подробнее ⇀
+            <div class="flex-none max-w-full">
+    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+        <a href="/dist/product-35">
+            <img src="/dist/pics/product-35-0.jpg" class="h-max mx-auto mb-2">
         </a>
+        <hr>
+        <div class="p-2">
+            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GZK4240</h3>
+            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+                Sapphire band sawing machine
+            </p>
+            <a class="font-medium text-blue-800
+                      hover:underline hover:text-blue-900" href="/dist/product-35">
+                Подробнее ⇀
+            </a>
+        </div>
     </div>
 </div>
 
@@ -242,20 +270,22 @@
             
             
 
-            <div class="border flex-none bg-white p-2 m-2 w-80 rounded hover:border-blue-500">
-    <a href="/dist/product-36">
-        <img src="/dist/pics/product-36-0.jpg" class="h-max mx-auto mb-2">
-    </a>
-    <hr>
-    <div class="p-2">
-        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5120</h3>
-        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-            Polysilicon combined vertical band saw
-        </p>
-        <a class="font-medium text-blue-800
-                  hover:underline hover:text-blue-900" href="/dist/product-36">
-            Подробнее ⇀
+            <div class="flex-none max-w-full">
+    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+        <a href="/dist/product-36">
+            <img src="/dist/pics/product-36-0.jpg" class="h-max mx-auto mb-2">
         </a>
+        <hr>
+        <div class="p-2">
+            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5120</h3>
+            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+                Polysilicon combined vertical band saw
+            </p>
+            <a class="font-medium text-blue-800
+                      hover:underline hover:text-blue-900" href="/dist/product-36">
+                Подробнее ⇀
+            </a>
+        </div>
     </div>
 </div>
 
@@ -266,20 +296,22 @@
             
             
 
-            <div class="border flex-none bg-white p-2 m-2 w-80 rounded hover:border-blue-500">
-    <a href="/dist/product-37">
-        <img src="/dist/pics/product-37-0.jpg" class="h-max mx-auto mb-2">
-    </a>
-    <hr>
-    <div class="p-2">
-        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GXK200</h3>
-        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-            Special CNC sawing machine
-        </p>
-        <a class="font-medium text-blue-800
-                  hover:underline hover:text-blue-900" href="/dist/product-37">
-            Подробнее ⇀
+            <div class="flex-none max-w-full">
+    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+        <a href="/dist/product-37">
+            <img src="/dist/pics/product-37-0.jpg" class="h-max mx-auto mb-2">
         </a>
+        <hr>
+        <div class="p-2">
+            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GXK200</h3>
+            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+                Special CNC sawing machine
+            </p>
+            <a class="font-medium text-blue-800
+                      hover:underline hover:text-blue-900" href="/dist/product-37">
+                Подробнее ⇀
+            </a>
+        </div>
     </div>
 </div>
 
