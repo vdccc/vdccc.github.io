@@ -13,8 +13,12 @@
     <nav class="sticky p-4 top-0 z-50
             flex flex-row justify-between bg-white
             border-b-2">
-    <div class="justify-self-start justify-center grid rounded p-2 ">
-        <h1 class="m-auto font-bold text-blue-900">LOGO</h1>
+
+    <div class="justify-self-start justify-center grid mx-2">
+        <a href="/dist">
+        <img src="/dist/pics/logo_FOST_ru.png" class="h-9">
+        </a>
+        <!-- <h1 class="m-auto font-bold text-blue-900">LOGO</h1> -->
     </div>
 
     <!-- text-blue-800 bg-gray-100 font-semibold -->
@@ -24,25 +28,25 @@
     
 
     <div class="hidden md:grid grid-cols-4">
-        <div class="p-2 grid w-28 rounded-l
+        <div class="p-2 grid rounded-l
                     
                         text-blue-800 bg-gray-100 font-semibold
                     ">
             <a class="m-auto" href="/dist"> Главная </a>
         </div>
-        <div class="p-2 grid w-28
+        <div class="p-2 grid
                     
                         text-gray-500 hover:text-gray-900 hover:bg-gray-100
                     ">
-            <a class="m-auto" href="/dist/categories"> Станки </a>
+            <a class="m-auto" href="/dist/catalog-1"> Станки </a>
         </div>
-        <div class="p-2 grid w-28
+        <div class="p-2 grid
                     
                         text-gray-500 hover:text-gray-900 hover:bg-gray-100
                     ">
             <a class="m-auto" href="/dist/catalog-2"> Пилы </a>
         </div>
-        <div class="p-2 grid w-28 rounded-r
+        <div class="p-2 grid rounded-r
                     
                         text-gray-500 hover:text-gray-900 hover:bg-gray-100
                     ">
@@ -61,10 +65,12 @@
             <div x-data="{ modal: false }" class="grid">
 
                 <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-2/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-3/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Почта</label>
             <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Телефон</label>
+            <input placeholder="+7495123..." class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
             <label class="text-gray-700 m-2">Сообщение</label>
             <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
             <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
@@ -82,11 +88,11 @@
         </div>
         <div class="grid p-2 rounded-l text-gray-700
                     bg-white hover:bg-blue-100">
-            <a class="m-auto" href="#">+12345678910</a>
+            <a class="m-auto" href="tel:+74952800823">+8(495)280-08-23</a>
         </div>
         <div class="grid p-2 rounded-r text-gray-700
                     bg-white hover:bg-blue-100">
-            <a class="m-auto" href="#">1234@gmail.com</a>
+            <a class="m-auto" href="mailto:info@chenlong.ru">info@chenlong.ru</a>
         </div>
     </div>
 
@@ -140,10 +146,12 @@
                 <div x-data="{ modal: false }" class="grid">
 
                     <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-2/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-3/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Почта</label>
             <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Телефон</label>
+            <input placeholder="+7495123..." class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
             <label class="text-gray-700 m-2">Сообщение</label>
             <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
             <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
@@ -175,8 +183,9 @@
                     </p>
                 </article>
 
-                <div class="p-5 m-5 w-72 h-72 grid place-center rounded-xl bg-blue-100">
-                    <h1 class="m-auto text-2xl font-bold text-blue-900">LOGO</h1>
+                <div class="m-5 w-72 h-72 grid place-center">
+                    <img src="/dist/pics/logo_chenlong.png">
+                    <!-- <h1 class="m-auto text-2xl font-bold text-blue-900">LOGO</h1> -->
                 </div>
             </div>
 
@@ -200,13 +209,16 @@
         </section>
 
         <section class="p-5">
-            <div class="bg-blue-100 p-5 rounded-xl bg-cover" style="background-image: url(/dist/pics/chenlong-bg.jpg);">
+            <div class="bg-blue-100 p-5 rounded-xl bg-cover" style="background-image: url(/dist/pics/chenlong-bg.jpg); background-position: 350px 0px;">
                 <div class="grid backdrop-blur-sm backdrop-brightness-75
                             rounded-xl w-max h-min p-2 md:p-10">
-                    <h1 class="text-xl md:text-6xl my-auto text-gray-100 font-semibold">
-                       Ленточнопильные станки <br> CHENLONG-HEAVY
+                    <h1 class="text-xl md:text-3xl my-auto text-gray-100 font-semibold">
+                        Ленточнопильные станки
                     </h1>
-                    <a href="/dist/categories" class="hover:underline text-white text-xl my-auto font-semibold">
+                    <h1 class="text-xl md:text-4xl my-auto text-gray-100 font-semibold">
+                        CHENLONG-HEAVY
+                    </h1>
+                    <a href="/dist/catalog-1" class="hover:underline text-white text-xl my-auto font-semibold">
                         Каталог станков ⇀
                     </a>
                 </div>
@@ -229,105 +241,157 @@
                 и особенными губками, лазерный индикатор реза, и т.д.
             </p>
             <p class="p-5">
-                &emsp; Ниже представлены самые популярные модели станков CHEHLONG – HEAVY, а полный перечень станков, можно найти в разделе <a class="text-blue-600 hover:underline" href="/dist/categories">«Каталог станков»</a>
+                &emsp; Ниже представлены самые популярные модели станков CHEHLONG – HEAVY, а полный перечень станков,
+                можно найти в разделе <a class="text-blue-600 hover:underline" href="/dist/catalog-1">«Каталог станков»</a>
+            </p>
+            <p class="p-5">
+                &emsp; Если Вы не нашли в нашем каталоге необходимый по параметрам ленточнопильный станок, предлагаем сделать нам запрос на станок.
+                Мы готовы сделать предложение на любой ленточнопильный станок, в любой комплектации, от небольшого, до специального станка для пиления заготовок диаметром до 3000 мм,
+                от ручного до полностью автоматического станка с рольгангами, включая возможность пиления под разными углами.
             </p>
         </section>
 
-        <section class="p-5 grid grid-cols-1 md:grid-cols-2">
-            <div class="m-2 flex flex-col md:flex-row bg-white rounded-xl">
-                <div class="h-44 w-44 flex-none border border-white hover:border-blue-600">
-                    <a href="/dist/product-1">
-                        <img src="/dist/pics/product-0-0.jpg">
-                    </a>
-                </div>
-                <div class="p-5">
-                    <a href="/dist/product-1">
-                        <h3 class="hover:underline text-gray-900 text-xl">CL-330B</h3>
-                    </a>
-                    <hr class="my-2">
-                    <p class="text-gray-800">
+        <!-- (это для размещения на главной странице)
+             Характеристики станка CH – 330HAH:
+             Тип станка – горизонтальный, автоматический
+             Размер заготовки: круглый (диаметр до 330 мм), квадратный до 330х330 мм
+             Габаритный размер: 2350х2200х1500 мм
+        -->
+        <section class="p-5 grid grid-cols-1 md:grid-cols-1">
+            <div class="m-2 md:mx-5 flex flex-col bg-white rounded-xl">
+                <div class="flex flex-row">
+                    <div class="h-56 w-56 flex-none row border border-white hover:border-blue-600">
+                        <a href="/dist/CH-330HAH">
+                            <img src="/dist/pics/product-0-0.jpg">
+                        </a>
+                    </div>
+                    <div class="flex-1 ml-5">
+                        <a href="/dist/CH-330HAH">
+                            <h3 class="hover:underline text-gray-800 text-2xl">CH-330HAH</h3>
+                        </a>
+                        <hr class="my-2">
                         <ul class="list-disc list-inside">
-                            <li class="font-bold">Горизонтального типа</li>
                             <li>
-                                <h4 class="inline font-bold">Заготовка:</h4> до 330 мм
+                                <h4 class="inline text-gray-800 font-bold">Тип станка:</h4>
+                                <h4 class="inline text-gray-700">горизонтальный, автоматический</h4>
                             </li>
                             <li>
-                                <h4 class="inline font-bold">Пилa:</h4> 34х1.1х4115 мм
+                                <h4 class="inline text-gray-800 font-bold">Заготовка:</h4>
+                                <h4 class="inline text-gray-700">Круглый диаметер до 330 мм, квадратный до 330x330 мм</h4>
+                            </li>
+                            <li>
+                                <h4 class="inline text-gray-800 font-bold">Габаритный размер:</h4>
+                                <h4 class="inline text-gray-700">2350x2220x1500 мм</h4>
                             </li>
                         </ul>
-                    </p>
+                    </div>
                 </div>
             </div>
-            <div class="m-2 flex flex-col md:flex-row bg-white rounded-xl">
-                <div class="h-44 w-44 flex-none border border-white hover:border-blue-600">
-                    <a href="/dist/product-1">
-                        <img src="/dist/pics/product-0-0.jpg">
-                    </a>
-                </div>
-                <div class="p-5">
-                    <a href="/dist/product-1">
-                        <h3 class="hover:underline text-gray-900 text-xl">CL-330B</h3>
-                    </a>
-                    <hr class="my-2">
-                    <p class="text-gray-800">
+            <!--
+                 Характеристики станка CH – 430HAH:
+                 Тип станка – горизонтальный, автоматический
+                 Размер заготовки: круглый (диаметр до 430 мм), квадратный до 430х430 мм
+                 Габаритный размер: 2750х2250х1710 мм
+            -->
+            <div class="m-2 md:mx-5 flex flex-col bg-white rounded-xl">
+                <div class="flex flex-row">
+                    <div class="h-56 w-56 flex-none row border border-white hover:border-blue-600">
+                        <a href="/dist/CH-430HAH">
+                            <img src="/dist/pics/product-2-0.jpg">
+                        </a>
+                    </div>
+                    <div class="flex-1 ml-5">
+                        <a href="/dist/CH-430HAH">
+                            <h3 class="hover:underline text-gray-900 text-2xl">CH-430HAH</h3>
+                        </a>
+                        <hr class="my-2">
                         <ul class="list-disc list-inside">
-                            <li class="font-bold">Горизонтального типа</li>
                             <li>
-                                <h4 class="inline font-bold">Заготовка:</h4> до 330 мм
+                                <h4 class="inline text-gray-800 font-bold">Тип станка:</h4>
+                                <h4 class="inline text-gray-700">Горизонтальный, автоматический</h4>
                             </li>
                             <li>
-                                <h4 class="inline font-bold">Пилa:</h4> 34х1.1х4115 мм
+                                <h4 class="inline text-gray-800 font-bold">Заготовка:</h4>
+                                <h4 class="inline text-gray-700">Круглый диаметер до 430 мм, квадратный до 430x430 мм</h4>
+                            </li>
+                            <li>
+                                <h4 class="inline text-gray-800 font-bold">Габаритный размер:</h4>
+                                <h4 class="inline text-gray-700">2750x2250x1710 мм</h4>
                             </li>
                         </ul>
-                    </p>
+                    </div>
                 </div>
             </div>
-            <div class="m-2 flex flex-col md:flex-row bg-white rounded-xl">
-                <div class="h-44 w-44 flex-none border border-white hover:border-blue-600">
-                    <a href="/dist/product-1">
-                        <img src="/dist/pics/product-0-0.jpg">
-                    </a>
-                </div>
-                <div class="p-5">
-                    <a href="/dist/product-1">
-                        <h3 class="hover:underline text-gray-900 text-xl">CL-330B</h3>
-                    </a>
-                    <hr class="my-2">
-                    <p class="text-gray-800">
+            <!-- Тип станка – горизонтальный, автоматический
+                 Размер заготовки: круглый (диаметр до 450 мм), квадратный до 450х450 мм
+                 Особенности: дополнительно оснащен ШВП
+                 Габаритный размер: 2750х3500х2540 мм
+                 -->
+            <div class="m-2 md:mx-5 flex flex-col bg-white rounded-xl">
+                <div class="flex flex-row">
+                    <div class="h-56 w-56 flex-none row border border-white hover:border-blue-600">
+                        <a href="/dist/CH-450NCH">
+                            <img src="/dist/pics/product-19-0.jpg">
+                        </a>
+                    </div>
+                    <div class="flex-1 ml-5">
+                        <a href="/dist/CH-450NCH">
+                            <h3 class="hover:underline text-gray-900 text-2xl">CH-450NCH</h3>
+                        </a>
+                        <hr class="my-2">
                         <ul class="list-disc list-inside">
-                            <li class="font-bold">Горизонтального типа</li>
                             <li>
-                                <h4 class="inline font-bold">Заготовка:</h4> до 330 мм
+                                <h4 class="inline text-gray-800 font-bold">Тип станка:</h4>
+                                <h4 class="inline text-gray-700">Горизонтальный, автоматический</h4>
                             </li>
                             <li>
-                                <h4 class="inline font-bold">Пилa:</h4> 34х1.1х4115 мм
+                                <h4 class="inline text-gray-800 font-bold">Заготовка:</h4>
+                                <h4 class="inline text-gray-700">Круглый диаметер до 450 мм, квадратный до 450x450 мм</h4>
+                            </li>
+                            <li>
+                                <h4 class="inline text-gray-800 font-bold">Габаритный размер:</h4>
+                                <h4 class="inline text-gray-700">2750x3500x2540 мм</h4>
+                            </li>
+                            <li>
+                                <h4 class="inline text-gray-800 font-bold">Особенности:</h4>
+                                <h4 class="inline text-gray-700">Оснащён ШВП</h4>
                             </li>
                         </ul>
-                    </p>
+                    </div>
                 </div>
             </div>
-            <div class="m-2 flex flex-col md:flex-row bg-white rounded-xl">
-                <div class="h-44 w-44 flex-none border border-white hover:border-blue-600">
-                    <a href="/dist/product-1">
-                        <img src="/dist/pics/product-0-0.jpg">
-                    </a>
-                </div>
-                <div class="p-5">
-                    <a href="/dist/product-1">
-                        <h3 class="hover:underline text-gray-900 text-xl">CL-330B</h3>
-                    </a>
-                    <hr class="my-2">
-                    <p class="text-gray-800">
+            <!-- Характеристики станка CH – 800H:
+                 Тип станка – двухколонный, полуавтоматический
+                 Размер заготовки: круглый (диаметр до 800 мм), квадратный до 800х800 мм
+                 Габаритный размер: 4130х2150х2500 мм
+            -->
+            <div class="m-2 md:mx-5 flex flex-col bg-white rounded-xl">
+                <div class="flex flex-row">
+                    <div class="h-56 w-56 flex-none row border border-white hover:border-blue-600">
+                        <a href="/dist/CH-800H">
+                            <img src="/dist/pics/product-14-0.jpg">
+                        </a>
+                    </div>
+                    <div class="flex-1 ml-5">
+                        <a href="/dist/CH-800H">
+                            <h3 class="hover:underline text-gray-900 text-2xl">CH-800H</h3>
+                        </a>
+                        <hr class="my-2">
                         <ul class="list-disc list-inside">
-                            <li class="font-bold">Горизонтального типа</li>
                             <li>
-                                <h4 class="inline font-bold">Заготовка:</h4> до 330 мм
+                                <h4 class="inline text-gray-800 font-bold">Тип станка:</h4>
+                                <h4 class="inline text-gray-700">Горизонтальный, полуавтоматический</h4>
                             </li>
                             <li>
-                                <h4 class="inline font-bold">Пилa:</h4> 34х1.1х4115 мм
+                                <h4 class="inline text-gray-800 font-bold">Заготовка:</h4>
+                                <h4 class="inline text-gray-700">Круглый диаметер до 800 мм, квадратный до 800x800 мм</h4>
+                            </li>
+                            <li>
+                                <h4 class="inline text-gray-800 font-bold">Габаритный размер:</h4>
+                                <h4 class="inline text-gray-700">4310x2150x2500 мм</h4>
                             </li>
                         </ul>
-                    </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -347,17 +411,20 @@
             <div class="flex flex-col">
                 <div class="p-5 flex flex-col md:flex-row">
                     <div class="md:p-5">
-                        <h3 class="font-semibold text-gray-800">Ленточные пилы</h3>
+                        <h3 class="font-semibold text-gray-800 text-xl">Ленточные пилы</h3>
                         <hr class="my-2">
-                        <p class="text-gray-700">
-                            &emsp; Для распиловки металлов по заданным параметрам лучше всего подходят ленточные пилы по металлу.
+                        <p class="text-gray-700 my-2">
+                            &emsp; Наша компания производит ленточные пилы под любые задачи и почти под любой бюджет. Мы работаем только с полотнами известных производителей, на которых имеется информация и о типе полотна, типе и шаге зуба и о самом производителе полотна. Эта информация дает определенные гарантии покупателю в качестве и стойкости ленточной пилы.
                         </p>
-                        <p class="text-gray-700 mt-2">
-                            &emsp; Эффективность и качество резки в первую очередь зависят от корректного выбора ленточного полотна пилы.
+                        <p class="text-gray-700 my-2">
+                            &emsp; Компания обладает большим, пополняемым, складом ленточного полотна (более 150.000 метров) и готова изготовить заказ по ленточным пилам от нескольких часов. Наш цех по производству пил оснащен четырьмя сварочными станками от компании Идеал (Ideal) Германия и изготавливает более 10.000 пил в месяц.
+                        </p>
+                        <p class="text-gray-700 my-2">
+                            &emsp; По запросу, мы готовы подобрать пилы для выполнения любой задачи пиления и быстро их изготовить.
                         </p>
                     </div>
 
-                    <img src="/dist/pics/band-saw-blade.jpeg" class="rounded w-96 h-44 m-5">
+                    <img src="/dist/pics/bandsaw_image_1.jpg" class="rounded w-96 h-44 m-5">
                 </div>
             </div>
         </section>
@@ -370,10 +437,12 @@
             <div x-data="{ modal: false }" class="grid">
 
                 <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-2/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-3/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Почта</label>
             <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Телефон</label>
+            <input placeholder="+7495123..." class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
             <label class="text-gray-700 m-2">Сообщение</label>
             <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
             <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
@@ -392,8 +461,10 @@
 
         <footer class="p-3 bg-gray-200 flex flex-col md:flex-row gap-5">
     <div class="flex-0 p-2">
-        <div class="w-40 h-40 rounded-xl bg-blue-100 grid">
-            <h1 class="font-bold text-blue-900 m-auto text-2xl">LOGO</h1>
+        <div class="w-40 h-40 rounded-xl grid place-items-center">
+            <a href="/dist">
+                <img src="/dist/pics/logo_FOST_ru.png">
+            </a>
         </div>
     </div>
 
@@ -402,13 +473,16 @@
             <h1 class="font-semibold text-blue-800">Контакты</h1>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="#">+1234567890</a>
+            <a class="text-gray-800 hover:underline" href="tel:+74952800232">8(495)280-02-32</a>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="#">+0987654321</a>
+            <a class="text-gray-800 hover:underline" href="mailto:info@chenlong.ru">info@chenlong.ru</a>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="#">qwertyu@qwerty.com</a>
+            <a class="text-gray-800 hover:underline" href="/dist/contacts">О компании ФОСТ</a>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="/dist/bx_tool">О компании BX TOOL</a>
         </div>
     </div>
 
@@ -417,10 +491,10 @@
             <h1 class="font-semibold text-blue-800">Продукция</h1>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="/dist/catalog-2">Ленточнопильные станки CHENLONG-HEAVY</a>
+            <a class="text-gray-800 hover:underline" href="/dist/catalog-1">Ленточнопильные станки CHENLONG-HEAVY</a>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="/dist/catalog-1">Ленточные пилы</a>
+            <a class="text-gray-800 hover:underline" href="/dist/catalog-2">Ленточные пилы</a>
         </div>
     </div>
 </footer>

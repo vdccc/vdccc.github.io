@@ -13,8 +13,12 @@
     <nav class="sticky p-4 top-0 z-50
             flex flex-row justify-between bg-white
             border-b-2">
-    <div class="justify-self-start justify-center grid rounded p-2 ">
-        <h1 class="m-auto font-bold text-blue-900">LOGO</h1>
+
+    <div class="justify-self-start justify-center grid mx-2">
+        <a href="/dist">
+        <img src="/dist/pics/logo_FOST_ru.png" class="h-9">
+        </a>
+        <!-- <h1 class="m-auto font-bold text-blue-900">LOGO</h1> -->
     </div>
 
     <!-- text-blue-800 bg-gray-100 font-semibold -->
@@ -24,25 +28,25 @@
     
 
     <div class="hidden md:grid grid-cols-4">
-        <div class="p-2 grid w-28 rounded-l
+        <div class="p-2 grid rounded-l
                     
                         text-gray-500 hover:text-gray-900 hover:bg-gray-100
                     ">
             <a class="m-auto" href="/dist"> Главная </a>
         </div>
-        <div class="p-2 grid w-28
+        <div class="p-2 grid
                     
                         text-blue-800 bg-gray-100 font-semibold
                     ">
-            <a class="m-auto" href="/dist/categories"> Станки </a>
+            <a class="m-auto" href="/dist/catalog-1"> Станки </a>
         </div>
-        <div class="p-2 grid w-28
+        <div class="p-2 grid
                     
                         text-gray-500 hover:text-gray-900 hover:bg-gray-100
                     ">
             <a class="m-auto" href="/dist/catalog-2"> Пилы </a>
         </div>
-        <div class="p-2 grid w-28 rounded-r
+        <div class="p-2 grid rounded-r
                     
                         text-gray-500 hover:text-gray-900 hover:bg-gray-100
                     ">
@@ -61,10 +65,12 @@
             <div x-data="{ modal: false }" class="grid">
 
                 <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-2/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-3/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Почта</label>
             <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Телефон</label>
+            <input placeholder="+7495123..." class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
             <label class="text-gray-700 m-2">Сообщение</label>
             <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
             <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
@@ -82,11 +88,11 @@
         </div>
         <div class="grid p-2 rounded-l text-gray-700
                     bg-white hover:bg-blue-100">
-            <a class="m-auto" href="#">+12345678910</a>
+            <a class="m-auto" href="tel:+74952800823">+8(495)280-08-23</a>
         </div>
         <div class="grid p-2 rounded-r text-gray-700
                     bg-white hover:bg-blue-100">
-            <a class="m-auto" href="#">1234@gmail.com</a>
+            <a class="m-auto" href="mailto:info@chenlong.ru">info@chenlong.ru</a>
         </div>
     </div>
 
@@ -140,10 +146,12 @@
                 <div x-data="{ modal: false }" class="grid">
 
                     <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-2/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-3/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Почта</label>
             <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Телефон</label>
+            <input placeholder="+7495123..." class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
             <label class="text-gray-700 m-2">Сообщение</label>
             <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
             <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
@@ -216,22 +224,20 @@
             
             
 
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-0">
-            <img src="/dist/pics/product-0-0.jpg" class="h-max mx-auto mb-2">
+            <div class="border flex-none flex flex-col bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+    <a class="flex-1" href="/dist/CH-330HAH">
+        <img src="/dist/pics/product-0-0.jpg" class="h-max mx-auto mb-2">
+    </a>
+    <hr>
+    <div class="p-2">
+        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-330HAH</h3>
+        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+            
+        </p>
+        <a class="font-medium text-blue-800
+                    hover:underline hover:text-blue-900" href="/dist/CH-330HAH">
+            Подробнее ⇀
         </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-330B</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Automatic horizontal band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-0">
-                Подробнее ⇀
-            </a>
-        </div>
     </div>
 </div>
 
@@ -240,22 +246,20 @@
             
             
 
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-1">
-            <img src="/dist/pics/product-1-0.jpg" class="h-max mx-auto mb-2">
+            <div class="border flex-none flex flex-col bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+    <a class="flex-1" href="/dist/CH-430HAH">
+        <img src="/dist/pics/product-2-0.jpg" class="h-max mx-auto mb-2">
+    </a>
+    <hr>
+    <div class="p-2">
+        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-430HAH</h3>
+        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+            
+        </p>
+        <a class="font-medium text-blue-800
+                    hover:underline hover:text-blue-900" href="/dist/CH-430HAH">
+            Подробнее ⇀
         </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-330A</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-efficiency band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-1">
-                Подробнее ⇀
-            </a>
-        </div>
     </div>
 </div>
 
@@ -264,22 +268,20 @@
             
             
 
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-2">
-            <img src="/dist/pics/product-2-0.jpg" class="h-max mx-auto mb-2">
+            <div class="border flex-none flex flex-col bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+    <a class="flex-1" href="/dist/CH-650H">
+        <img src="/dist/pics/product-6-0.jpg" class="h-max mx-auto mb-2">
+    </a>
+    <hr>
+    <div class="p-2">
+        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-650H</h3>
+        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+            
+        </p>
+        <a class="font-medium text-blue-800
+                    hover:underline hover:text-blue-900" href="/dist/CH-650H">
+            Подробнее ⇀
         </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">430B</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Intelligent and efficient band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-2">
-                Подробнее ⇀
-            </a>
-        </div>
     </div>
 </div>
 
@@ -288,22 +290,20 @@
             
             
 
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-3">
-            <img src="/dist/pics/product-3-0.jpg" class="h-max mx-auto mb-2">
+            <div class="border flex-none flex flex-col bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+    <a class="flex-1" href="/dist/CH-550H">
+        <img src="/dist/pics/product-6-0.jpg" class="h-max mx-auto mb-2">
+    </a>
+    <hr>
+    <div class="p-2">
+        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-550H</h3>
+        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+            
+        </p>
+        <a class="font-medium text-blue-800
+                    hover:underline hover:text-blue-900" href="/dist/CH-550H">
+            Подробнее ⇀
         </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">430A</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-efficiency band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-3">
-                Подробнее ⇀
-            </a>
-        </div>
     </div>
 </div>
 
@@ -312,22 +312,20 @@
             
             
 
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-4">
-            <img src="/dist/pics/product-4-0.jpg" class="h-max mx-auto mb-2">
+            <div class="border flex-none flex flex-col bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+    <a class="flex-1" href="/dist/CH-800H">
+        <img src="/dist/pics/product-14-0.jpg" class="h-max mx-auto mb-2">
+    </a>
+    <hr>
+    <div class="p-2">
+        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-800H</h3>
+        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+            
+        </p>
+        <a class="font-medium text-blue-800
+                    hover:underline hover:text-blue-900" href="/dist/CH-800H">
+            Подробнее ⇀
         </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GZ4233</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double column horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-4">
-                Подробнее ⇀
-            </a>
-        </div>
     </div>
 </div>
 
@@ -336,22 +334,20 @@
             
             
 
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-5">
-            <img src="/dist/pics/product-5-0.jpg" class="h-max mx-auto mb-2">
+            <div class="border flex-none flex flex-col bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+    <a class="flex-1" href="/dist/CH-1000H">
+        <img src="/dist/pics/product-15-0.jpg" class="h-max mx-auto mb-2">
+    </a>
+    <hr>
+    <div class="p-2">
+        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-1000H</h3>
+        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+            
+        </p>
+        <a class="font-medium text-blue-800
+                    hover:underline hover:text-blue-900" href="/dist/CH-1000H">
+            Подробнее ⇀
         </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GZ4243</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double column horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-5">
-                Подробнее ⇀
-            </a>
-        </div>
     </div>
 </div>
 
@@ -360,22 +356,20 @@
             
             
 
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-6">
-            <img src="/dist/pics/product-6-0.jpg" class="h-max mx-auto mb-2">
+            <div class="border flex-none flex flex-col bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+    <a class="flex-1" href="/dist/CH-450NCH">
+        <img src="/dist/pics/product-19-0.jpg" class="h-max mx-auto mb-2">
+    </a>
+    <hr>
+    <div class="p-2">
+        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-450NCH</h3>
+        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+            
+        </p>
+        <a class="font-medium text-blue-800
+                    hover:underline hover:text-blue-900" href="/dist/CH-450NCH">
+            Подробнее ⇀
         </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4265</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double-column gantry horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-6">
-                Подробнее ⇀
-            </a>
-        </div>
     </div>
 </div>
 
@@ -384,22 +378,20 @@
             
             
 
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-7">
-            <img src="/dist/pics/product-7-0.jpg" class="h-max mx-auto mb-2">
+            <div class="border flex-none flex flex-col bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+    <a class="flex-1" href="/dist/CH-400HAH">
+        <img src="/dist/pics/product-26-0.jpg" class="h-max mx-auto mb-2">
+    </a>
+    <hr>
+    <div class="p-2">
+        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-400HAH</h3>
+        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+            
+        </p>
+        <a class="font-medium text-blue-800
+                    hover:underline hover:text-blue-900" href="/dist/CH-400HAH">
+            Подробнее ⇀
         </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GW4028B</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Hinged metal band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-7">
-                Подробнее ⇀
-            </a>
-        </div>
     </div>
 </div>
 
@@ -408,22 +400,20 @@
             
             
 
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-8">
-            <img src="/dist/pics/product-8-0.jpg" class="h-max mx-auto mb-2">
+            <div class="border flex-none flex flex-col bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+    <a class="flex-1" href="/dist/CH-1000HAH">
+        <img src="/dist/pics/product-1001-0.jpg" class="h-max mx-auto mb-2">
+    </a>
+    <hr>
+    <div class="p-2">
+        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-1000HAH</h3>
+        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+            
+        </p>
+        <a class="font-medium text-blue-800
+                    hover:underline hover:text-blue-900" href="/dist/CH-1000HAH">
+            Подробнее ⇀
         </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GW4038</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Hinged metal band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-8">
-                Подробнее ⇀
-            </a>
-        </div>
     </div>
 </div>
 
@@ -432,1150 +422,20 @@
             
             
 
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-9">
-            <img src="/dist/pics/product-9-0.jpg" class="h-max mx-auto mb-2">
+            <div class="border flex-none flex flex-col bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
+    <a class="flex-1" href="/dist/CH-800HAH">
+        <img src="/dist/pics/product-1002-0.jpg" class="h-max mx-auto mb-2">
+    </a>
+    <hr>
+    <div class="p-2">
+        <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-800HAH</h3>
+        <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
+            
+        </p>
+        <a class="font-medium text-blue-800
+                    hover:underline hover:text-blue-900" href="/dist/CH-800HAH">
+            Подробнее ⇀
         </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4230/50</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double column horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-9">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-10">
-            <img src="/dist/pics/product-10-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4240</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Hinged metal band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-10">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-11">
-            <img src="/dist/pics/product-11-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4240/50</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double column horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-11">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-12">
-            <img src="/dist/pics/product-12-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4240/70</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double column horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-12">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-13">
-            <img src="/dist/pics/product-13-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4250</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double column horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-13">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-14">
-            <img src="/dist/pics/product-14-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4280</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double-column gantry horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-14">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-15">
-            <img src="/dist/pics/product-15-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G42100</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double-column gantry horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-15">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-16">
-            <img src="/dist/pics/product-16-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G42180</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double-column gantry horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-16">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-17">
-            <img src="/dist/pics/product-17-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G42130</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double-column gantry horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-17">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-18">
-            <img src="/dist/pics/product-18-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G42300</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double-column gantry horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-18">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-19">
-            <img src="/dist/pics/product-19-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-450NC</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed intelligent band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-19">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-20">
-            <img src="/dist/pics/product-20-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4250/90</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double column horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-20">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-21">
-            <img src="/dist/pics/product-21-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GZ4250H</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Automatic horizontal band sawing machine for profiles
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-21">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-22">
-            <img src="/dist/pics/product-22-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GH4250</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double column horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-22">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-23">
-            <img src="/dist/pics/product-23-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GH4260/80</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Double column horizontal metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-23">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-24">
-            <img src="/dist/pics/product-24-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-600SA</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Automatic double-column horizontal corner metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-24">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-25">
-            <img src="/dist/pics/product-25-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-300SA</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Automatic double-column horizontal corner metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-25">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-26">
-            <img src="/dist/pics/product-26-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-400SA</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Automatic double-column horizontal corner metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-26">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-27">
-            <img src="/dist/pics/product-27-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CH-300S</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Automatic double-column horizontal corner metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-27">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-28">
-            <img src="/dist/pics/product-28-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4240-70Z</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Automatic double-column horizontal corner metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-28">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-29">
-            <img src="/dist/pics/product-29-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GW4028Z</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Automatic double-column horizontal corner metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-29">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-30">
-            <img src="/dist/pics/product-30-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GB4240/60</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Special sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-30">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-31">
-            <img src="/dist/pics/product-31-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">铜棒在线切割机组</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Special sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-31">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-32">
-            <img src="/dist/pics/product-32-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G607</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed circular saw for aluminum plate
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-32">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-33">
-            <img src="/dist/pics/product-33-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G4260/120/250</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Aluminum foam slitting machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-33">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-34">
-            <img src="/dist/pics/product-34-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5130</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Aluminum foam combined vertical band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-34">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-35">
-            <img src="/dist/pics/product-35-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GZK4240</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Sapphire band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-35">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-36">
-            <img src="/dist/pics/product-36-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5120</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Polysilicon combined vertical band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-36">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-37">
-            <img src="/dist/pics/product-37-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">GXK200</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Special CNC sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-37">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-38">
-            <img src="/dist/pics/product-38-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5480/260</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                G54 pulley vertical metal band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-38">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-39">
-            <img src="/dist/pics/product-39-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5125</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Special small vertical metal band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-39">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-40">
-            <img src="/dist/pics/product-40-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5160</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Vertical metal band sawing machine for aluminum
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-40">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-41">
-            <img src="/dist/pics/product-41-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5325/G5340/G5350/G5360</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Block vertical metal band sawing machine
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-41">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-42">
-            <img src="/dist/pics/product-42-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G53</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Block vertical band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-42">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-43">
-            <img src="/dist/pics/product-43-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5360x160x600</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Block vertical band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-43">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-44">
-            <img src="/dist/pics/product-44-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5325x65x750</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Long stroke pulley vertical band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-44">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-45">
-            <img src="/dist/pics/product-45-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">G5360x160x260</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                Block vertical band saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-45">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-46">
-            <img src="/dist/pics/product-46-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-70NC</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed metal circular saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-46">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-47">
-            <img src="/dist/pics/product-47-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-75NC</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed metal circular saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-47">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-48">
-            <img src="/dist/pics/product-48-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-85NC</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed metal circular saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-48">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-49">
-            <img src="/dist/pics/product-49-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-100NC</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed metal circular saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-49">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-50">
-            <img src="/dist/pics/product-50-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-110NC</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed metal circular saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-50">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-51">
-            <img src="/dist/pics/product-51-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-120NC</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed metal circular saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-51">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-52">
-            <img src="/dist/pics/product-52-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-150NC</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed metal circular saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-52">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-53">
-            <img src="/dist/pics/product-53-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-180NC</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed metal circular saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-53">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-54">
-            <img src="/dist/pics/product-54-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-300NC</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed metal circular saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-54">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-55">
-            <img src="/dist/pics/product-55-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">CL-230NC</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                High-speed metal circular saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-55">
-                Подробнее ⇀
-            </a>
-        </div>
-    </div>
-</div>
-
-        
-
-            
-            
-
-            <div class="flex-none max-w-full">
-    <div class="border flex-none bg-white p-2 m-2 max-w-full md:w-80 rounded hover:border-blue-500">
-        <a href="/dist/product-56">
-            <img src="/dist/pics/product-56-0.jpg" class="h-max mx-auto mb-2">
-        </a>
-        <hr>
-        <div class="p-2">
-            <h3 class="mb-1.5 font-semibold text-gray-800 text-l">B450</h3>
-            <p class="ml-2 mb-2 text list-disc text-gray-800 list-inside">
-                CNC steel plate circular saw
-            </p>
-            <a class="font-medium text-blue-800
-                      hover:underline hover:text-blue-900" href="/dist/product-56">
-                Подробнее ⇀
-            </a>
-        </div>
     </div>
 </div>
 
@@ -1586,8 +446,10 @@
     </div>
         <footer class="p-3 bg-gray-200 flex flex-col md:flex-row gap-5">
     <div class="flex-0 p-2">
-        <div class="w-40 h-40 rounded-xl bg-blue-100 grid">
-            <h1 class="font-bold text-blue-900 m-auto text-2xl">LOGO</h1>
+        <div class="w-40 h-40 rounded-xl grid place-items-center">
+            <a href="/dist">
+                <img src="/dist/pics/logo_FOST_ru.png">
+            </a>
         </div>
     </div>
 
@@ -1596,13 +458,16 @@
             <h1 class="font-semibold text-blue-800">Контакты</h1>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="#">+1234567890</a>
+            <a class="text-gray-800 hover:underline" href="tel:+74952800232">8(495)280-02-32</a>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="#">+0987654321</a>
+            <a class="text-gray-800 hover:underline" href="mailto:info@chenlong.ru">info@chenlong.ru</a>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="#">qwertyu@qwerty.com</a>
+            <a class="text-gray-800 hover:underline" href="/dist/contacts">О компании ФОСТ</a>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="/dist/bx_tool">О компании BX TOOL</a>
         </div>
     </div>
 
@@ -1611,10 +476,10 @@
             <h1 class="font-semibold text-blue-800">Продукция</h1>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="/dist/catalog-2">Ленточнопильные станки CHENLONG-HEAVY</a>
+            <a class="text-gray-800 hover:underline" href="/dist/catalog-1">Ленточнопильные станки CHENLONG-HEAVY</a>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="/dist/catalog-1">Ленточные пилы</a>
+            <a class="text-gray-800 hover:underline" href="/dist/catalog-2">Ленточные пилы</a>
         </div>
     </div>
 </footer>

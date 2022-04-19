@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/main.css" rel="stylesheet">
+  <script src="/dist/main.js" defer></script>
+</head>
+<body class="h-screen">
+
+    <div class="max-w-screen-lg mx-auto">
+
+    <nav class="sticky p-4 top-0 z-50
+            flex flex-row justify-between bg-white
+            border-b-2">
+
+    <div class="justify-self-start justify-center grid mx-2">
+        <a href="/dist">
+        <img src="/dist/pics/logo_FOST_ru.png" class="h-9">
+        </a>
+        <!-- <h1 class="m-auto font-bold text-blue-900">LOGO</h1> -->
+    </div>
+
+    <!-- text-blue-800 bg-gray-100 font-semibold -->
+    <!-- text-gray-500 hover:text-gray-900 hover:bg-gray-100 -->
+
+    
+    
+
+    <div class="hidden md:grid grid-cols-4">
+        <div class="p-2 grid rounded-l
+                    
+                        text-gray-500 hover:text-gray-900 hover:bg-gray-100
+                    ">
+            <a class="m-auto" href="/dist"> Главная </a>
+        </div>
+        <div class="p-2 grid
+                    
+                        text-gray-500 hover:text-gray-900 hover:bg-gray-100
+                    ">
+            <a class="m-auto" href="/dist/catalog-1"> Станки </a>
+        </div>
+        <div class="p-2 grid
+                    
+                        text-gray-500 hover:text-gray-900 hover:bg-gray-100
+                    ">
+            <a class="m-auto" href="/dist/catalog-2"> Пилы </a>
+        </div>
+        <div class="p-2 grid rounded-r
+                    
+                        text-gray-500 hover:text-gray-900 hover:bg-gray-100
+                    ">
+            <a class="m-auto" href="/dist/contacts"> Контакты </a>
+        </div>
+    </div>
+
+    <div class="justify-self-end hidden
+                md:flex flex-row
+                font-semibold text-gray-100
+                divide-x divide-blue-800 ring-1
+                ring-blue-800 rounded bg-blue-800">
+        <div class="grid p-2 rounded-l text-gray-700
+                    bg-blue-800 text-white hover:bg-blue-900">
+
+            <div x-data="{ modal: false }" class="grid">
+
+                <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-3/5">
+        <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
+            <label class="text-gray-700 m-2">Почта</label>
+            <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Телефон</label>
+            <input placeholder="+7495123..." class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Сообщение</label>
+            <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
+            <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
+                <button @click="modal=false" class="p-2.5 basis-32 mr-5 text-gray-500 rounded hover:text-blue-900 hover:bg-gray-100">Отмена</button>
+                <button @click="modal=false" class="p-2.5 basis-32 mr-2 font-semibold text-white bg-blue-800 rounded hover:bg-blue-900">Отправить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <a class="m-auto" href="#" @click="modal=!modal">Заказать</a>
+            </div> <!-- modal end -->
+
+        </div>
+        <div class="grid p-2 rounded-l text-gray-700
+                    bg-white hover:bg-blue-100">
+            <a class="m-auto" href="tel:+74952800823">+8(495)280-08-23</a>
+        </div>
+        <div class="grid p-2 rounded-r text-gray-700
+                    bg-white hover:bg-blue-100">
+            <a class="m-auto" href="mailto:info@chenlong.ru">info@chenlong.ru</a>
+        </div>
+    </div>
+
+
+    <!-- phone menu -->
+    <div x-data="{ slide: false }" class="box md:hidden">
+
+        <div @click="slide=!slide"
+            class="p-3 text-white bg-blue-800 rounded">
+            <img class="w-5 h-5" src="/dist/left-shevron.svg">
+        </div>
+
+        <div x-show="slide"
+            x-transition.opacity
+            class="fixed inset-0 bg-black/25"></div>
+
+        <div
+            x-show="slide"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="translate-x-full"
+            x-transition:enter-end="translate-x-0"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="translate-x-0"
+            x-transition:leave-end="translate-x-full"
+            @click.away="slide=false"
+            class="fixed inset-y-0 right-0 z-40 w-screen max-w-xs
+                    bg-white border-l-2 flex-col divide-y divide-gray-200">
+            <a href="/dist">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Главная
+                </div>
+            </a>
+            <a href="/dist/categories">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Станки
+                </div>
+            </a>
+            <a href="/dist/catalog-2">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Пилы
+                </div>
+            </a>
+            <a href="/dist/contacts">
+                <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
+                    Контакты
+                </div>
+            </a>
+            <div class="grid m-5 p-5 rounded text-gray-700
+                        bg-blue-800 text-2xl text-white hover:bg-blue-900">
+
+                <div x-data="{ modal: false }" class="grid">
+
+                    <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-3/5">
+        <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
+            <label class="text-gray-700 m-2">Почта</label>
+            <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Телефон</label>
+            <input placeholder="+7495123..." class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Сообщение</label>
+            <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
+            <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
+                <button @click="modal=false" class="p-2.5 basis-32 mr-5 text-gray-500 rounded hover:text-blue-900 hover:bg-gray-100">Отмена</button>
+                <button @click="modal=false" class="p-2.5 basis-32 mr-2 font-semibold text-white bg-blue-800 rounded hover:bg-blue-900">Отправить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                    <a class="m-auto" href="#" @click="modal=!modal">Заказать звонок</a>
+                </div> <!-- modal end -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="m-5 p-5 pl-10 pb-10 border-b-2">
+        <h1 class="text-gray-800 font-bold text-3xl pb-1.5">
+            BX TOOL M42
+        </h1>
+        <div class="flex flex-row">
+            <a class="text-gray-600 font-medium hover:underline"
+               href="/dist/index.html">
+                Главная
+            </a>
+            <h3 class="mx-5 text-blue-600">≻</h3>
+            <a class="text-gray-600 hover:underline" href="/dist/catalog-2/">
+                Каталог пил
+            </a>
+            <h3 class="mx-5 text-blue-600">≻</h3>
+            <h1 class="text-gray-600">
+                BX TOOL M42
+            </h1>
+        </div>
+    </div>
+
+    <div class="p-5 flex-1">
+        <div class="flex justify-between flex-col">
+
+            
+
+            <img class="flex-1 h-56" src=/dist/pics/saw-0-0.jpg>
+            </img>
+
+            <div class="p-5 flex-auto flex flex-col">
+                <div class="flex-1 md:px-10">
+                    <h1 class="font-medium text-gray-800 text-2xl">Описание:</h1>
+                    <hr class="my-2">
+                    <div class="font-medium text-gray-700">
+                        
+                        <p class="text-gray-700 font-medium my-2">
+    M42 - это тип быстрорежущей стали биметаллической пилы предназначенной
+    для пиления основных марок сталей твердостью до 40-45 HRC. Твердость режущих
+    кромок зубьев 67 – 69 HRC. Содержание 8% кобальта и 2% карбида вольфрама увеличивает
+    стойкость режущей кромки.
+</p>
+<p class="text-gray-700 font-medium my-2">
+Линейка биметаллических ленточных пил М42 BX TOOL  изготавливается из упругой рессорно-пружинной стали (основа) производства компании "Bohlerstrip" (Австрия) и профильной проволоки из быстрорежущей стали (HSS) производства компании "Bohlerstrip" (Австрия). "Bohlerstrip" - является производителем и поставщиком для всех крупных производителей ленточных пил по всему миру. Приварка профильной проволоки из быстрорежущей стали (HSS) к основе из рессорно-пружинной стали осуществляется на предприятии Benxi Tool с помощью лазерной технологии на оборудовании "ROFIN" (Германия).
+</p>
+<p class="text-gray-700 font-medium my-2">
+В зависимости от выбора пилы и задач, компания BX TOOL предлагает различную заточку зубьев для различных задач с углом ноль градусов, с положительным углом и большим положительным углом.
+</p>
+<p class="text-gray-700 font-medium my-2">
+Кроме этого предлагаются ленточные пилы с нормальным зубом (маркировка NT), для резки заготовок различного сечения из высокоуглеродистых, инструментальных сталей, а также чугуна, такие пилы рекомендуется для широкого диапазона использования.
+</p>
+<p class="text-gray-700 font-medium my-2">
+Пилы с усиленным зубом (маркировка PT), для избегания скалывания зубьев. Такие пилы рекомендуют применять для резки труб, металлоконструкций и пакетов.
+</p>
+<p class="text-gray-700 font-medium my-2">
+Пилы с комбинированным зубом (маркировка CT), для достижения высокой производительности и экономической эффективности. Пилы с такой формой зуба рекомендуют применять для резки труб, различных стальных профилей, а также труднообрабатываемых материалов.
+</p>
+<p class="text-gray-700 font-medium my-2">
+Пилы с обратным углом (маркировка BT), для резки труб. Такие пилы имеют усиленную «спинку» и увеличенные впадины между зубьев для выноса стружки.
+</p>
+<p class="text-gray-700 font-medium my-2">
+Пилы с прямой впадиной у зубьев (маркировка FT), для эффективной резки нержавеющей стали, меди, алюминия.
+</p>
+<p class="text-gray-700 font-medium my-2">
+Пилы со специальной формой зуба (маркировка TT). Такие пилы рекомендованы к применению на небольших станках, как пилы универсального применения и резки различного стального профиля (фасонного проката), как по одной заготовке, так и пакета заготовок.
+</p>
+<p class="text-gray-700 font-medium my-2">
+Биметаллические пилы BX TOOL завоевали репутацию качественного, надежного и долговечного режущего инструмента, благодаря тому, что компания использует для производства изделий сырье премиум-класса, современное оборудования и новейшие технологии.
+</p>
+<p class="text-gray-700 font-medium my-2">
+Чтобы заказать ленточные пилы по металлу, свяжитесь с нашими менеджерами. Это можно сделать, отправив нам запрос или позвонив по телефону.
+</p>
+<p class="text-gray-700 font-medium mt-2">
+Наша компания готова подобрать пилу по существующему аналогу или подобрать пилу исходя из задач производства.
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="m-5 p-5 flex flex-col">
+    <div class="px-5">
+        <h1 class="text-gray-800 font-semibold text-xl">Есть вопросы? Напишите нам:</h1>
+    </div>
+
+    <div class="flex flex-col md:flex-row">
+        <div class="p-5 flex flex-col">
+            <label class="my-2 text-xl text-gray-700">Почта</label>
+            <input class="my-2 rounded border-2 p-2" placeholder="email@example.com..." type="text">
+            <label class="my-2 text-xl text-gray-700">Телефон</label>
+            <input class="my-2 rounded border-2 p-2" placeholder="+1234579..." type="text">
+        </div>
+
+        <div class="p-5 flex-1">
+            <textarea placeholder="Сообщение ... "
+                      class="text-gray-800 border-2 w-full h-48 md:h-full rounded p-2"></textarea>
+        </div>
+    </div>
+
+    <div class="p-2 px-5 flex flex-row justify-end">
+        <input type="button" value="Отправить" onclick="alert()"
+               class="bg-blue-800 rounded font-semibold text-white p-3
+                     hover:bg-blue-900">
+    </div>
+</div>
+
+    </div>
+
+    <div class="bg-white">
+        <footer class="p-3 bg-gray-200 flex flex-col md:flex-row gap-5">
+    <div class="flex-0 p-2">
+        <div class="w-40 h-40 rounded-xl grid place-items-center">
+            <a href="/dist">
+                <img src="/dist/pics/logo_FOST_ru.png">
+            </a>
+        </div>
+    </div>
+
+    <div class="flex-auto p-2">
+        <div>
+            <h1 class="font-semibold text-blue-800">Контакты</h1>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="tel:+74952800232">8(495)280-02-32</a>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="mailto:info@chenlong.ru">info@chenlong.ru</a>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="/dist/contacts">О компании ФОСТ</a>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="/dist/bx_tool">О компании BX TOOL</a>
+        </div>
+    </div>
+
+    <div class="flex-auto p-2">
+        <div>
+            <h1 class="font-semibold text-blue-800">Продукция</h1>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="/dist/catalog-1">Ленточнопильные станки CHENLONG-HEAVY</a>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="/dist/catalog-2">Ленточные пилы</a>
+        </div>
+    </div>
+</footer>
+
+    </div>
+
+    </div>
+</body>
+</html>

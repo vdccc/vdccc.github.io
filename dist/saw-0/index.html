@@ -13,8 +13,12 @@
     <nav class="sticky p-4 top-0 z-50
             flex flex-row justify-between bg-white
             border-b-2">
-    <div class="justify-self-start justify-center grid rounded p-2 ">
-        <h1 class="m-auto font-bold text-blue-900">LOGO</h1>
+
+    <div class="justify-self-start justify-center grid mx-2">
+        <a href="/dist">
+        <img src="/dist/pics/logo_FOST_ru.png" class="h-9">
+        </a>
+        <!-- <h1 class="m-auto font-bold text-blue-900">LOGO</h1> -->
     </div>
 
     <!-- text-blue-800 bg-gray-100 font-semibold -->
@@ -24,25 +28,25 @@
     
 
     <div class="hidden md:grid grid-cols-4">
-        <div class="p-2 grid w-28 rounded-l
+        <div class="p-2 grid rounded-l
                     
                         text-gray-500 hover:text-gray-900 hover:bg-gray-100
                     ">
             <a class="m-auto" href="/dist"> Главная </a>
         </div>
-        <div class="p-2 grid w-28
+        <div class="p-2 grid
                     
                         text-gray-500 hover:text-gray-900 hover:bg-gray-100
                     ">
             <a class="m-auto" href="/dist/categories"> Станки </a>
         </div>
-        <div class="p-2 grid w-28
+        <div class="p-2 grid
                     
                         text-gray-500 hover:text-gray-900 hover:bg-gray-100
                     ">
             <a class="m-auto" href="/dist/catalog-2"> Пилы </a>
         </div>
-        <div class="p-2 grid w-28 rounded-r
+        <div class="p-2 grid rounded-r
                     
                         text-gray-500 hover:text-gray-900 hover:bg-gray-100
                     ">
@@ -61,10 +65,12 @@
             <div x-data="{ modal: false }" class="grid">
 
                 <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-2/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-3/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Почта</label>
             <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Телефон</label>
+            <input placeholder="+7495123..." class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
             <label class="text-gray-700 m-2">Сообщение</label>
             <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
             <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
@@ -82,11 +88,11 @@
         </div>
         <div class="grid p-2 rounded-l text-gray-700
                     bg-white hover:bg-blue-100">
-            <a class="m-auto" href="#">+12345678910</a>
+            <a class="m-auto" href="tel:+74952800823">+8(495)280-08-23</a>
         </div>
         <div class="grid p-2 rounded-r text-gray-700
                     bg-white hover:bg-blue-100">
-            <a class="m-auto" href="#">1234@gmail.com</a>
+            <a class="m-auto" href="mailto:info@chenlong.ru">info@chenlong.ru</a>
         </div>
     </div>
 
@@ -140,10 +146,12 @@
                 <div x-data="{ modal: false }" class="grid">
 
                     <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-2/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-3/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Почта</label>
             <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Телефон</label>
+            <input placeholder="+7495123..." class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
             <label class="text-gray-700 m-2">Сообщение</label>
             <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
             <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
@@ -165,7 +173,7 @@
 
     <div class="m-5 p-5 pl-10 pb-10 border-b-2">
         <h1 class="text-gray-800 font-bold text-3xl pb-1.5">
-            Ленточное полотно по металлу BX TOOL M42
+            BX TOOL M42
         </h1>
         <div class="flex flex-row">
             <a class="text-gray-600 font-medium hover:underline"
@@ -178,7 +186,7 @@
             </a>
             <h3 class="mx-5 text-blue-600">≻</h3>
             <h1 class="text-gray-600">
-                Ленточное полотно по металлу BX TOOL M42
+                BX TOOL M42
             </h1>
         </div>
     </div>
@@ -250,8 +258,10 @@
     <div class="bg-white">
         <footer class="p-3 bg-gray-200 flex flex-col md:flex-row gap-5">
     <div class="flex-0 p-2">
-        <div class="w-40 h-40 rounded-xl bg-blue-100 grid">
-            <h1 class="font-bold text-blue-900 m-auto text-2xl">LOGO</h1>
+        <div class="w-40 h-40 rounded-xl grid place-items-center">
+            <a href="/dist">
+                <img src="/dist/pics/logo_FOST_ru.png">
+            </a>
         </div>
     </div>
 
@@ -260,13 +270,16 @@
             <h1 class="font-semibold text-blue-800">Контакты</h1>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="#">+1234567890</a>
+            <a class="text-gray-800 hover:underline" href="tel:+74952800232">8(495)280-02-32</a>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="#">+0987654321</a>
+            <a class="text-gray-800 hover:underline" href="mailto:info@chenlong.ru">info@chenlong.ru</a>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="#">qwertyu@qwerty.com</a>
+            <a class="text-gray-800 hover:underline" href="/dist/contacts">О компании ФОСТ</a>
+        </div>
+        <div class="my-2">
+            <a class="text-gray-800 hover:underline" href="/dist/bx_tool">О компании BX TOOL</a>
         </div>
     </div>
 
@@ -275,10 +288,10 @@
             <h1 class="font-semibold text-blue-800">Продукция</h1>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="/dist/catalog-2">Ленточнопильные станки CHENLONG-HEAVY</a>
+            <a class="text-gray-800 hover:underline" href="/dist/catalog-1">Ленточнопильные станки CHENLONG-HEAVY</a>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="/dist/catalog-1">Ленточные пилы</a>
+            <a class="text-gray-800 hover:underline" href="/dist/catalog-2">Ленточные пилы</a>
         </div>
     </div>
 </footer>
