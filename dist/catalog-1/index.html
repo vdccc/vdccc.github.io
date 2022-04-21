@@ -16,7 +16,7 @@
 
     <div class="justify-self-start justify-center grid mx-2">
         <a href="/dist">
-        <img src="/dist/pics/logo_FOST_ru.png" class="h-9">
+        <img src="/dist/pics/logo_FOST_small_ru.png" class="img-no-blur h-9">
         </a>
         <!-- <h1 class="m-auto font-bold text-blue-900">LOGO</h1> -->
     </div>
@@ -88,7 +88,7 @@
         </div>
         <div class="grid p-2 rounded-l text-gray-700
                     bg-white hover:bg-blue-100">
-            <a class="m-auto" href="tel:+74952800823">+8(495)280-08-23</a>
+            <a class="m-auto" href="tel:+74952800832">+7(495)280-08-32</a>
         </div>
         <div class="grid p-2 rounded-r text-gray-700
                     bg-white hover:bg-blue-100">
@@ -193,31 +193,6 @@
         </div>
     </div>
 
-    <!-- <div class="mx-2 bg-white pb-5 px-4 border-b-2">
-         <div class="mx-auto grid grid-cols-5">
-         <div class="p-2 grid text-blue-800 font-semibold bg-gray-200
-         rounded-l">
-         <a class="m-auto"> Категория 1 </a>
-         </div>
-         <div class="p-2 grid text-gray-500 font-medium
-         hover:text-gray-900 hover:bg-gray-200">
-         <a class="m-auto"> Категория 2 </a>
-         </div>
-         <div class="p-2 grid text-gray-500 font-medium
-         hover:text-gray-900 hover:bg-gray-200">
-         <a class="m-auto"> Категория 3 </a>
-         </div>
-         <div class="p-2 grid text-gray-500 font-medium
-         hover:text-gray-900 hover:bg-gray-200">
-         <a class="m-auto"> Категория 4 </a>
-         </div>
-         <div class="p-2 grid text-gray-500 font-medium
-         hover:text-gray-900 hover:bg-gray-200 rounded-r">
-         <a class="m-auto"> Категория 5 </a>
-         </div
-         </div>
-         </div>
-    -->
     <div class="bg-white m-2 flex flex-row flex-wrap justify-items-stretch">
         
 
@@ -442,13 +417,38 @@
         
     </div>
 
-    <div class="bg-white">
+    <div class="m-5 p-5 flex flex-col">
+    <div class="px-5">
+        <h1 class="text-gray-800 font-semibold text-xl">Есть вопросы? Напишите нам:</h1>
     </div>
-        <footer class="p-3 bg-gray-200 flex flex-col md:flex-row gap-5">
+
+    <div class="flex flex-col md:flex-row">
+        <div class="p-5 flex flex-col">
+            <label class="my-2 text-xl text-gray-700">Почта</label>
+            <input class="my-2 rounded border-2 p-2" placeholder="email@example.com..." type="text">
+            <label class="my-2 text-xl text-gray-700">Телефон</label>
+            <input class="my-2 rounded border-2 p-2" placeholder="+1234579..." type="text">
+        </div>
+
+        <div class="p-5 flex-1">
+            <textarea placeholder="Сообщение ... "
+                      class="text-gray-800 border-2 w-full h-48 md:h-full rounded p-2"></textarea>
+        </div>
+    </div>
+
+    <div class="p-2 px-5 flex flex-row justify-end">
+        <input type="button" value="Отправить" onclick="alert()"
+               class="bg-blue-800 rounded font-semibold text-white p-3
+                     hover:bg-blue-900">
+    </div>
+</div>
+
+
+    <footer class="p-3 bg-gray-200 flex flex-col md:flex-row gap-5">
     <div class="flex-0 p-2">
         <div class="w-40 h-40 rounded-xl grid place-items-center">
             <a href="/dist">
-                <img src="/dist/pics/logo_FOST_ru.png">
+                <img src="/dist/pics/logo_FOST_ru.png" class="img-no-blur">
             </a>
         </div>
     </div>
@@ -458,13 +458,13 @@
             <h1 class="font-semibold text-blue-800">Контакты</h1>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="tel:+74952800232">8(495)280-02-32</a>
+            <a class="text-gray-800 hover:underline" href="tel:+74952800832">+7 495 280 08 32</a>
         </div>
         <div class="my-2">
             <a class="text-gray-800 hover:underline" href="mailto:info@chenlong.ru">info@chenlong.ru</a>
         </div>
         <div class="my-2">
-            <a class="text-gray-800 hover:underline" href="/dist/contacts">О компании ФОСТ</a>
+            <a class="text-gray-800 hover:underline" href="/dist/fost">О компании ФОСТ</a>
         </div>
         <div class="my-2">
             <a class="text-gray-800 hover:underline" href="/dist/bx_tool">О компании BX TOOL</a>
@@ -483,6 +483,7 @@
         </div>
     </div>
 </footer>
+
 
     </div>
 

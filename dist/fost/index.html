@@ -6,9 +6,9 @@
   <link href="/dist/main.css" rel="stylesheet">
   <script src="/dist/main.js" defer></script>
 </head>
-<body class="h-screen">
+<body class="bg-white">
 
-    <div class="max-w-screen-lg mx-auto">
+    <div class="max-w-screen-lg mx-auto h-screen flex flex-col">
 
     <nav class="sticky p-4 top-0 z-50
             flex flex-row justify-between bg-white
@@ -171,183 +171,46 @@
 </nav>
 
 
-    <div class="md:m-5 md:pb-10 p-5 border-b-2">
-        <div class="md:ml-10">
-            <h1 class="text-gray-800 font-bold text-3xl pb-1.5">
-                CH-800H
-            </h1>
-            <div class="flex flex-row">
-                <a class="text-gray-600 font-medium hover:underline"
-                    href="/dist">
-                    Главная
-                </a>
-                <h3 class="mx-5 text-blue-600">≻</h3>
-                <a class="text-gray-600 font-medium w-min md:w-max hover:underline" href="/dist/catalog-1">
-                    Каталог станков
-                </a>
-                <h3 class="mx-5 text-blue-600">≻</h3>
-                <h1 class="text-gray-600 font-medium w-min md:w-max">
-                    CH-800H
-                </h1>
-            </div>
-        </div>
-    </div>
+        <div class="bg-white p-2 m-2 flex flex-col flex-1">
+            <section class="flex flex-col justify-items-center">
+                <h1 class="text-gray-700 text-4xl my-5">История компании ФОСТ</h1>
+Наша компания была основана в 1992 году, как компания по подбору оборудования, технологии и инструмента, поставки оборудования, сервисному обслуживанию и ремонту.
 
-    <div class="md:p-5 flex-1">
-        <div class="flex justify-between flex-col md:flex-row">
-            <div class="flex-none md:w-2/5 flex flex-col">
-                <div x-data="{ modal: false }" class="p-2">
-                    <div class="p-2">
-                        
-                        <div x-data="{ popup: false }">
-    <div @click="popup=false" x-show="popup" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-        <div class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen">
-            <img class="border" src="/dist/pics/product-14-0.jpg"></img>
-        </div>
-    </div>
-    <img @click="popup=true" class="cursor-pointer hover:border-blue-900 border" src="/dist/pics/product-14-0.jpg"></img>
-</div>
+В начале своей деятельности компания специализировалась на поставке и обслуживании станок фрезерной и токарной группы и систем ЧПУ и датчиков обратной связи ряда европейских компаний, что продолжается по сей день.
 
-                    </div>
-                </div>
+В начале 2000х годов наша компания начала сотрудничать с компанией АМАДА (AMADA) по всем направлениям: обработка листового материала (листогибы, КРП, лазерные комплексы), ленточнопильное направление, сейчас это одно из основных направлений деятельности нашей компании.
 
-                <div class="flex-auto grid grid-cols-2">
-                    
-                    
-                        <div class="p-4">
-                            <div x-data="{ popup: false }">
-    <div @click="popup=false" x-show="popup" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-        <div class="bg-white p-5 rounded shadow-xl h-max-screen w-max-screen">
-            <img class="border" src="/dist/pics/product-14-0.jpg"></img>
-        </div>
-    </div>
-    <img @click="popup=true" class="cursor-pointer hover:border-blue-900 border" src="/dist/pics/product-14-0.jpg"></img>
-</div>
+В 2007 году наша компания создает собственное сварочное производство ленточных полотен и активно развивает данное направление. В 2016 году, компания начинает работать с ленточным полотном от второго производителя. К началу 2022 года на складе у нашей компании имеется более 150 км ленточнопильного полотна, 4 сварочные машины ИДЕАЛ (IDEAL). Компания производит более 10.000 ленточных пил в месяц по заказам клиентов.
 
-                        </div>
-                    
-                </div>
-            </div>
+С 2009 года компания предлагает и такую услугу, как ремонт и обслуживание ленточнопильных станков. Мы обслуживает станки европейского и азиатского производства. К началу 2022 года компания провела несколько модернизаций ленточнопильных станков с заменой комплектующих и систем управления.
 
-            <div class="p-5 flex-auto flex flex-col">
-                <div class="flex-1 pb-5">
-                    <h1 class="text-xl text-gray-800 text-medium">Описание</h1>
-                    <hr class="my-2">
-                    <p class="text-gray-700 text-medium">
-                        &emsp; Ленточнопильный станок модели CH – 800H предназначен для обработки заготовок средних и больших размеров. Данная модель станка CH-800H, где буква H означает HEAVY (усиленный), предназначена для эффективной резки заготовок из различных материалов с высокой точностью, скоростью и эффективностью. Станок прост в обслуживании и эксплуатации. Станок оснащен усиленным редуктором, лазерным указателем реза, усиленным двигателем вращения пилы. 
-                    </p>
-                </div>
-                <div class="text-medium text-gray-700">
-                    <h1 class="text-xl text-gray-800 text-medium">Характеристики</h1>
-                    <hr class="my-2">
-                    <h3 class="my-5">Характеристики станка CH-800H (все характеристики указаны в качестве информации,
-                        производитель имеет право изменять характеристики в зависимости от комплектации станка):</h3>
-                    <table class="table-auto">
-                        <tbody class="divide-y">
-                            
-                            <tr class="hover:bg-gray-100">
-                                <td class="font-semibold">
-                                    Тип станка:
-                                </td>
-                                <td>
-                                    двухколонный, полуавтоматический
-                                </td>
-                            </tr>
-                            
-                            <tr class="hover:bg-gray-100">
-                                <td class="font-semibold">
-                                    Размер заготовки:
-                                </td>
-                                <td>
-                                    круглый (диаметр до 800 мм), квадратный до 800х800 мм
-                                </td>
-                            </tr>
-                            
-                            <tr class="hover:bg-gray-100">
-                                <td class="font-semibold">
-                                    Скорость пилы:
-                                </td>
-                                <td>
-                                    18-60 м/мин
-                                </td>
-                            </tr>
-                            
-                            <tr class="hover:bg-gray-100">
-                                <td class="font-semibold">
-                                    Напряжение питания:
-                                </td>
-                                <td>
-                                    380 В, 50 Гц
-                                </td>
-                            </tr>
-                            
-                            <tr class="hover:bg-gray-100">
-                                <td class="font-semibold">
-                                    Роликовый стол:
-                                </td>
-                                <td>
-                                    1,5 м (другие длины по запросу)
-                                </td>
-                            </tr>
-                            
-                            <tr class="hover:bg-gray-100">
-                                <td class="font-semibold">
-                                    Вес станка:
-                                </td>
-                                <td>
-                                    около 7000 кг
-                                </td>
-                            </tr>
-                            
-                            <tr class="hover:bg-gray-100">
-                                <td class="font-semibold">
-                                    Габаритный размер:
-                                </td>
-                                <td>
-                                    4130х2150х2500 мм
-                                </td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+За время работы компании, а это уже более 30 лет, в нашей компании сложился сплоченный коллектив профессионалов, которые готовы выполнить стандартные и не стандартные задачи!
 
-                    <h3 class="mt-5">Прочие характеристики по запросу.</h3>
-                </div>
-            </div>
+Мы предлагаем воспользоваться услугами по сервисному обслуживанию, ремонту ленточнопильных станков, подборе и поставке ленточных полотен от нашей компании.
+
+                <p class="text-gray-700 my-2 text-medium">
+                </p>
+                <p class="text-gray-700 my-2 text-medium">
+                </p>
+                <p class="text-gray-700 my-2 text-medium">
+В 2005 году компания строит новый завод и начинает выпускать биметаллические полотна, способные справиться с резкой металлических заготовок и металлоизделий особой прочности. А в 2010 году производственные мощности завода модернизируются и завод оснащается оборудованием от ведущих мировых производителей.
+                </p>
+                <p class="text-gray-700 my-2 text-medium">
+В 2013 год была запущена новая линия по изготовлению твердосплавных полотен.
+                </p>
+                <p class="text-gray-700 my-2 text-medium">
+За последние 20 лет интенсивного развития BX TOOL удалось добиться потрясающих маркетинговых и производственных результатов, что сделало бренд узнаваемым и вывело его на первое место по производству биметаллических режущих полотен в Азии.
+                </p>
+                <p class="text-gray-700 my-2 text-medium">
+Объемы производства полотна в год достигают более 15 миллионов метров и 2000 тонн, а производственные площади занимают около 75 тысяч квадратных метров. В цехах компании трудятся более 500 квалифицированных сотрудников, а выпускаемая продукция поставляется в более, чем 20 стран по всему миру.
+                </p>
+                <p class="text-gray-700 my-2 text-medium">
+                    Наша компания является представителем компании БХ Тоол (BX TOOL) в России и странах СНГ, занимается производством пил из полотна, подбором пил под задачи резки от заказчиков, разработкой технологии резки с учетом размеров и материалов заготовки, используемого оборудования, применяемого инструмента и требуемых показателей по качеству и производительности резки.
+                </p>
+                <iframe class="my-5 flex-none" height="572" src="https://www.youtube.com/embed/D3X75dSRgiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
         </div>
 
-    </div>
-
-    <div>
-        <div class="m-5 p-5 flex flex-col">
-    <div class="px-5">
-        <h1 class="text-gray-800 font-semibold text-xl">Есть вопросы? Напишите нам:</h1>
-    </div>
-
-    <div class="flex flex-col md:flex-row">
-        <div class="p-5 flex flex-col">
-            <label class="my-2 text-xl text-gray-700">Почта</label>
-            <input class="my-2 rounded border-2 p-2" placeholder="email@example.com..." type="text">
-            <label class="my-2 text-xl text-gray-700">Телефон</label>
-            <input class="my-2 rounded border-2 p-2" placeholder="+1234579..." type="text">
-        </div>
-
-        <div class="p-5 flex-1">
-            <textarea placeholder="Сообщение ... "
-                      class="text-gray-800 border-2 w-full h-48 md:h-full rounded p-2"></textarea>
-        </div>
-    </div>
-
-    <div class="p-2 px-5 flex flex-row justify-end">
-        <input type="button" value="Отправить" onclick="alert()"
-               class="bg-blue-800 rounded font-semibold text-white p-3
-                     hover:bg-blue-900">
-    </div>
-</div>
-
-    </div>
-
-    <div class="bg-white">
         <footer class="p-3 bg-gray-200 flex flex-col md:flex-row gap-5">
     <div class="flex-0 p-2">
         <div class="w-40 h-40 rounded-xl grid place-items-center">
@@ -389,8 +252,6 @@
 </footer>
 
     </div>
-
-    </div> <!-- close scroller -->
 
 
 </body>
