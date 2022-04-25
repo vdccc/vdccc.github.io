@@ -518,12 +518,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .table {
   display: table;
 }
-.table-cell {
-  display: table-cell;
-}
-.table-row {
-  display: table-row;
-}
 .grid {
   display: grid;
 }
@@ -817,6 +811,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+.pl-5 {
+  padding-left: 1.25rem;
 }
 .pb-20 {
   padding-bottom: 5rem;
