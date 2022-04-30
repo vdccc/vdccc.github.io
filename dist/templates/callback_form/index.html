@@ -1,11 +1,11 @@
 <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-3/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-4/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
-            <label class="text-gray-700 m-2">Почта</label>
-            <input placeholder="mail@example.com" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
-            <label class="text-gray-700 m-2">Телефон</label>
-            <input placeholder="+7495123..." class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
-            <label class="text-gray-700 m-2">Сообщение</label>
+            <label class="text-gray-700 m-2">Ваши контакты:</label>
+            <input placeholder="Телефон (обязательно)" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <input placeholder="Имя" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <input placeholder="Адрес электронной почты" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
+            <label class="text-gray-700 m-2">Сообщение:</label>
             <textarea placeholder="Сообщение ... " class="text-gray-800 m-2 p-2 flex-1 basis-44 border hover:border-blue-900 rounded"></textarea>
             <div class="py-5 md:py-2 flex flex-row justify-center md:justify-end">
                 <button @click="modal=false" class="p-2.5 basis-32 mr-5 text-gray-500 rounded hover:text-blue-900 hover:bg-gray-100">Отмена</button>
