@@ -65,7 +65,7 @@
             <div x-data="{ modal: false }" class="grid">
 
                 <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-4/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-full md:w-2/5 md:h-4/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Ваши контакты:</label>
             <input placeholder="Телефон (обязательно)" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
@@ -125,7 +125,7 @@
                     Главная
                 </div>
             </a>
-            <a href="/dist/categories">
+            <a href="/dist/catalog-1">
                 <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
                     Станки
                 </div>
@@ -146,7 +146,7 @@
                 <div x-data="{ modal: false }" class="grid">
 
                     <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-4/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-full md:w-2/5 md:h-4/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Ваши контакты:</label>
             <input placeholder="Телефон (обязательно)" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
@@ -171,20 +171,20 @@
 </nav>
 
 
-    <div class="m-5 p-5 pl-10 pb-10 border-b-2">
+    <div class="m-5 p-5 md:pl-10 md:pb-10 border-b-2">
         <h1 class="text-gray-800 font-bold text-3xl pb-1.5">
             BX TOOL CT
         </h1>
         <div class="flex flex-row">
-            <a class="text-gray-600 font-medium hover:underline"
+            <a class="text-gray-600 hover:underline"
                href="/dist/index.html">
                 Главная
             </a>
-            <h3 class="mx-5 text-blue-600">≻</h3>
+            <h3 class="mx-2 md:mx-5 text-blue-600">≻</h3>
             <a class="text-gray-600 hover:underline" href="/dist/catalog-2/">
-                Каталог пил
+                Каталог ленточных пил
             </a>
-            <h3 class="mx-5 text-blue-600">≻</h3>
+            <h3 class="mx-2 md:mx-5 text-blue-600">≻</h3>
             <h1 class="text-gray-600">
                 BX TOOL CT
             </h1>
@@ -192,85 +192,85 @@
     </div>
 
     <div class="p-5 flex-1">
-        <div class="px-10">
+        <div class="md:px-10">
 
             
 
-            <img class="h-56 m-10 float-left" src=/dist/pics/saw-2-0.jpg>
+            <img class="h-full pb-5 md:h-56 md:m-10 md:float-left" src=/dist/pics/saw-2-0.jpg>
 
             <h1 class="flex-1 font-medium text-gray-800 text-2xl">Описание:</h1>
             <hr class="my-2">
 
             
-            <p class="text-gray-700 font-medium my-2">
+            <p class="text-gray-800 my-2">
     Линейка твердосплавных пил BX TOOL СT изготавливается из упругой рессорно-пружинной стали (основа) производства компании "Bohlerstrip" (Австрия) и твердосплавных зубьев производства Sandvik (Швеция). Приварка твердосплавных зубьев осуществляется самым передовым способом, а именно, лазером на оборудовании лидера технологии - фирмы AMADA MIYACHI. Заточка зубьев проводится с использованием 5-ти координатных шлифовальных станков немецкой фирмы VOLLMER, являющейся ведущей компанией в сфере обработки инструментов. Указанные материалы и оборудование, используемые для изготовления твердосплавных ленточных пил Benxi CT, делают их качество и стойкость бескомпромиссно высокими.
 </p>
-<img class="m-5" src="/dist/pics/bx_tool_tb_table.png">
-<h1 class="text-gray-800 font-medium text-xl my-2 mt-5">Твердосплавные ленточные пилы</h1>
+<img class="h-full py-5 md:m-5" src="/dist/pics/bx_tool_tb_table.png">
+<h1 class="text-gray-800 text-xl my-2 mt-5">Твердосплавные ленточные пилы</h1>
 <hr class="my-2">
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
     Ленточнопильные станки по металлу – это высокотехнологичное оборудование, режущим инструментом которого выступают ленточные пилы по металлу. Пила в виде ленты имеет циклическую структуру и натянута на шкивы, обеспечивая отличную производительность и качество резки. Но не каждая пила способна справиться с высокопрочными сплавами и труднообрабатываемыми материалами. В этом случае используются твердосплавные модификации пил, изготовленные в соответствии с последними научными разработками в сфере обработки металлов. Они с легкостью справляются с жаропрочными и нержавеющими сталями, а также титаном прочностью до 62 HRC.
 </p>
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
     Ленточнопильные станки по металлу – это высокотехнологичное оборудование, режущим инструментом которого выступают ленточные пилы по металлу. Пила в виде ленты имеет циклическую структуру и натянута на шкивы, обеспечивая отличную производительность и качество резки. Но не каждая пила способна справиться с высокопрочными сплавами и труднообрабатываемыми материалами. В этом случае используются твердосплавные модификации пил, изготовленные в соответствии с последними научными разработками в сфере обработки металлов. Они с легкостью справляются с жаропрочными и нержавеющими сталями, а также титаном прочностью до 62 HRC.
 </p>
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
     Технология изготовления такого рода пил гораздо сложнее, чем биметаллических моделей. Основой в них выступает специальная упругая рессорно-пружинная сталь. К основе при помощи лазера припаивается твердосплавная пластинка. Каждая пластинка проходит заточку и шлифовку с соблюдением заданной геометрии, в результате формируется зуб с очень твердыми режущими кромками.
 </p>
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
     Перед установкой пилы такого типа следует тщательно проверить все узлы станка и соблюдать рекомендации по режимам эксплуатации.
 </p>
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
     Твердосплавные ленточные пилы BX TOOL CT бывают с разведёнными зубьями и зубьями без разводки. Зубья без разводки имеют особую форму, которая позволяет поочерёдно углублять и расширять пропил, при этом ленточнопильный станок может не обладать мощным электромотором привода пилы.
 </p>
-<h1 class="text-gray-800 font-medium text-xl my-2 mt-5">Приемущества твердосплавных ленточных пил</h1>
+<h1 class="text-gray-800 text-xl my-2 mt-5">Приемущества твердосплавных ленточных пил</h1>
 <hr class="my-2">
-<ul class="list-disc list-inside">
-    <li class="text-gray-700">
+<ul class="list-disc list-inside text-left">
+    <li class="text-gray-800">
 Широкий диапазон обрабатываемых материалов благодаря наличию твердосплавных напаек на зубьях.
     </li>
-    <li class="text-gray-700">
+    <li class="text-gray-800">
 Полотно из сверхпрочной стали позволяет значительно продлить срок службы инструмента при различных условиях эксплуатации.
     </li>
-    <li class="text-gray-700">
+    <li class="text-gray-800">
 Гарантирует очень точный качественный срез и ровную поверхность распиливаемой заготовки.
     </li>
-    <li class="text-gray-700">
+    <li class="text-gray-800">
 Высокая износостойкость
     </li>
-    <li class="text-gray-700">
+    <li class="text-gray-800">
 Высокая скорость резания и, соответственно, отличная производительность.
     </li>
 </ul>
-<h1 class="text-gray-800 font-medium text-xl my-2 mt-5">Материалы, с которыми с легкостью справятся пилы твердосплавной группы:</h1>
+<h1 class="text-gray-800 text-xl my-2 mt-5">Материалы, с которыми с легкостью справятся пилы твердосплавной группы:</h1>
 <hr class="my-2">
-<ul class="list-disc list-inside">
-    <li class="text-gray-700">
+<ul class="list-disc list-inside text-left">
+    <li class="text-gray-800">
 чугунные и медные заготовки
     </li>
-    <li class="text-gray-700">
+    <li class="text-gray-800">
 отливки из алюминия
     </li>
-    <li class="text-gray-700">
+    <li class="text-gray-800">
 бронзовые изделия
     </li>
-    <li class="text-gray-700">
+    <li class="text-gray-800">
 высоколегированные стали
     </li>
-    <li class="text-gray-700">
+    <li class="text-gray-800">
 абразивные материалы
     </li>
-    <li class="text-gray-700">
+    <li class="text-gray-800">
 нержавеющие и жаропрочные сплавы
     </li>
-    <li class="text-gray-700">
+    <li class="text-gray-800">
 составы для аэрокосмических и промышленных отраслей
     </li>
 </ul>
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
  Чтобы заказать твердосплавные ленточные пилы по металлу, свяжитесь с нашими менеджерами. Это можно сделать, отправив нам запрос или позвонив по телефону.
 </p>
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
  Наша компания готова подобрать пилу по существующему аналогу или подобрать пилу исходя из задач производства.
 </p>
 
@@ -279,7 +279,7 @@
     </div>
 
     <div>
-        <div class="m-5 p-5 flex flex-col">
+        <div class="py-10 md:m-5 md:p-5 flex flex-col">
     <div class="px-5">
         <h1 class="text-gray-800 font-semibold text-xl">Есть вопросы? Напишите нам:</h1>
     </div>

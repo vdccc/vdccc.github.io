@@ -65,7 +65,7 @@
             <div x-data="{ modal: false }" class="grid">
 
                 <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-4/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-full md:w-2/5 md:h-4/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Ваши контакты:</label>
             <input placeholder="Телефон (обязательно)" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
@@ -125,7 +125,7 @@
                     Главная
                 </div>
             </a>
-            <a href="/dist/categories">
+            <a href="/dist/catalog-1">
                 <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
                     Станки
                 </div>
@@ -146,7 +146,7 @@
                 <div x-data="{ modal: false }" class="grid">
 
                     <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-4/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-full md:w-2/5 md:h-4/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Ваши контакты:</label>
             <input placeholder="Телефон (обязательно)" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
@@ -177,46 +177,46 @@
                         ООО НПП «ФОСТ»
                     </h1>
                 </div>
-                <table class="p-5">
-                    <tbody>
+                <table class="">
+                    <tbody class="divide-y">
                         <tr>
-                            <td class="text-gray-900 w-max font-medium text-xl">
-                                <h1 class="w-max">Полное наименование</h1>
+                            <td class="text-gray-900 font-medium text-xl">
+                                <h1 class="w-min md:w-max">Полное наименование</h1>
                             </td>
-                            <td class="text-gray-800 font-medium text-xl pl-5">
+                            <td class="text-gray-800 text-xl pl-5">
                                 Общество с ограниченной ответственностью Научно-производственное предприятие «ФОСТ»
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="">
                             <td class="text-gray-900 font-medium text-xl">
                                 Юридический адрес
                             </td>
-                            <td class="text-gray-800 font-medium text-xl pl-5">
+                            <td class="text-gray-800 text-xl pl-5">
                                 107023, г. Москва,  ул. Малая  Семеновская,  дом  3
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="">
                             <td class="text-gray-900 font-medium text-xl">
                                 Телефон
                             </td>
-                            <td href="tel:+7495280832" class="pl-5 text-gray-800 font-medium text-xl">
+                            <td href="tel:+7495280832" class="pl-5 text-gray-800 text-xl">
                                 +7 495 280 08 32
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="">
                             <td class="text-gray-900 font-medium text-xl">
                                 E-mail
                             </td>
-                            <td href="mailto:info@chenlong.ru" class="pl-5 text-gray-800 font-medium text-xl">
+                            <td href="mailto:info@chenlong.ru" class="pl-5 text-gray-800 text-xl">
                                 info@chenlong.ru
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="">
                             <td class="text-gray-900 font-medium text-xl">
                                 Сайт
                             </td>
                             <td class="pl-5">
-                                <a href="chenlong.ru" class="text-gray-800 font-medium text-xl">
+                                <a href="chenlong.ru" class="text-gray-800 text-xl">
                                     chenlong.ru
                                 </a>
                             </td>

@@ -65,7 +65,7 @@
             <div x-data="{ modal: false }" class="grid">
 
                 <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-4/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-full md:w-2/5 md:h-4/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Ваши контакты:</label>
             <input placeholder="Телефон (обязательно)" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
@@ -125,7 +125,7 @@
                     Главная
                 </div>
             </a>
-            <a href="/dist/categories">
+            <a href="/dist/catalog-1">
                 <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
                     Станки
                 </div>
@@ -146,7 +146,7 @@
                 <div x-data="{ modal: false }" class="grid">
 
                     <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-4/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-full md:w-2/5 md:h-4/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Ваши контакты:</label>
             <input placeholder="Телефон (обязательно)" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
@@ -171,20 +171,20 @@
 </nav>
 
 
-    <div class="m-5 p-5 pl-10 pb-10 border-b-2">
+    <div class="m-5 p-5 md:pl-10 md:pb-10 border-b-2">
         <h1 class="text-gray-800 font-bold text-3xl pb-1.5">
             BX TOOL M51
         </h1>
         <div class="flex flex-row">
-            <a class="text-gray-600 font-medium hover:underline"
+            <a class="text-gray-600 hover:underline"
                href="/dist/index.html">
                 Главная
             </a>
-            <h3 class="mx-5 text-blue-600">≻</h3>
+            <h3 class="mx-2 md:mx-5 text-blue-600">≻</h3>
             <a class="text-gray-600 hover:underline" href="/dist/catalog-2/">
-                Каталог пил
+                Каталог ленточных пил
             </a>
-            <h3 class="mx-5 text-blue-600">≻</h3>
+            <h3 class="mx-2 md:mx-5 text-blue-600">≻</h3>
             <h1 class="text-gray-600">
                 BX TOOL M51
             </h1>
@@ -192,35 +192,35 @@
     </div>
 
     <div class="p-5 flex-1">
-        <div class="px-10">
+        <div class="md:px-10">
 
             
 
-            <img class="h-56 m-10 float-left" src=/dist/pics/saw-1-0.jpg>
+            <img class="h-full pb-5 md:h-56 md:m-10 md:float-left" src=/dist/pics/saw-1-0.jpg>
 
             <h1 class="flex-1 font-medium text-gray-800 text-2xl">Описание:</h1>
             <hr class="my-2">
 
             
-            <p class="text-gray-700 font-medium my-2">
+            <p class="text-gray-800 my-2">
 M51 - это тип быстрорежущей стали биметаллической пилы предназначенной для пиления высокопрочных, нержавеющих и жаропрочных сталей, в том числе и заготовок большого поперечного сечения и твердостью свыше 50 HRC. Твердость режущих кромок зубьев 69 – 70 HRC. Содержание 10% кобальта и 10% карбида вольфрама увеличивает стойкость режущей кромки на 20% по сравнению с M42.
 </p>
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
 Линейка ленточных пил М51 BX TOOL изготавливается из упругой рессорно-пружинной стали (основа) производства компании "Bohlerstrip" (Австрия) и профильной проволоки из быстрорежущей стали (HSS) производства компании "Bohlerstrip" (Австрия). "Bohlerstrip" - является производителем и поставщиком для всех крупных производителей ленточных пил по всему миру. Приварка профильной проволоки из быстрорежущей стали (HSS) к основе из рессорно-пружинной стали осуществляется на предприятии Benxi Tool с помощью лазерной технологии на оборудовании "ROFIN" (Германия).
 </p>
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
 Биметаллические пилы по металлу М51 предназначены для резки материалов повышенной прочности, таких сталей как: нержавеющая, высокопрочная, жаропрочная и других. Им поддаются труднообрабатываемые заготовки больших сечений.
 </p>
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
     Ленточные пилы М51 BX TOOL производятся из высококачественного сырья, которое поставляется ведущим производителем ленточных пил - Benxi Tool Co. Ltd. Это гарантирует их высокое качество, надежность, прочность и долговечность.
 </p>
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
     При создании биметаллических пил BX TOOL M51 используется рессорно-пружинная сталь премиум-класса в качестве основы от производителей из Европы, и профильная проволока из быстрорежущей стали. Производителем компонентов выступает австрийская компания "Bohlerstrip", которая является поставщиком качественного материала для всех крупных мировых фирм по производству ленточных пил. Материалы свариваются с помощью прогрессивной лазерной технологии на немецком оборудовании "ROFIN".
 </p>
-<p class="text-gray-700 font-medium my-2">
+<p class="text-gray-800 my-2">
 Чтобы заказать ленточные пилы по металлу, свяжитесь с нашими менеджерами. Это можно сделать, отправив нам запрос или позвонив по телефону.
 </p>
-<p class="text-gray-700 font-medium mt-2">
+<p class="text-gray-800 mt-2">
 Наша компания готова подобрать пилу по существующему аналогу или подобрать пилу исходя из задач производства.
 </p>
 
@@ -229,7 +229,7 @@ M51 - это тип быстрорежущей стали биметалличе
     </div>
 
     <div>
-        <div class="m-5 p-5 flex flex-col">
+        <div class="py-10 md:m-5 md:p-5 flex flex-col">
     <div class="px-5">
         <h1 class="text-gray-800 font-semibold text-xl">Есть вопросы? Напишите нам:</h1>
     </div>

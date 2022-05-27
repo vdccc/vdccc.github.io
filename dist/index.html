@@ -65,7 +65,7 @@
             <div x-data="{ modal: false }" class="grid">
 
                 <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-4/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-full md:w-2/5 md:h-4/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Ваши контакты:</label>
             <input placeholder="Телефон (обязательно)" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
@@ -125,7 +125,7 @@
                     Главная
                 </div>
             </a>
-            <a href="/dist/categories">
+            <a href="/dist/catalog-1">
                 <div class="p-5 font-medium text-gray-700 text-2xl mx-auto">
                     Станки
                 </div>
@@ -146,7 +146,7 @@
                 <div x-data="{ modal: false }" class="grid">
 
                     <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-4/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-full md:w-2/5 md:h-4/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Ваши контакты:</label>
             <input placeholder="Телефон (обязательно)" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
@@ -173,8 +173,8 @@
 
     <div class="bg-white">
         <section class="mx-auto">
-            <div class="flex flex-col md:flex-row">
-                <div class="pt-5 md:my-auto bg-white md:ml-10 w-full md:w-3/5">
+            <div class="flex flex-row">
+                <div class="flex-1 px-5 pt-5 md:my-auto bg-white md:ml-10 w-full md:w-3/5">
                     <h3 class="text-2xl md:text-4xl font-semibold text-gray-800">
                         Ленточнопильные станки
                     </h3>
@@ -182,14 +182,13 @@
                         CHENLONG-HEAVY
                     </h2>
                     <hr class="my-2">
-                    <p class="text-lg text-gray-600">
+                    <p class="text-lg text-gray-700">
                         Надёжная продукция по выгодным ценам.
                     </p>
                 </div>
 
-                <div class="m-5 w-72 grid place-center">
+                <div class="hidden md:block w-32 md:m-5 md:w-72 grid place-center">
                     <img src="/dist/pics/logo_chenlong.png">
-                    <!-- <h1 class="m-auto text-2xl font-bold text-blue-900">LOGO</h1> -->
                 </div>
             </div>
 
@@ -202,18 +201,18 @@
                 </a>
             </div>
 
-            <div class="flex flex-col justify-around md:flex-row md:mx-10">
-                <div class="p-5">
+            <div class="px-2 flex flex-col justify-around md:flex-row md:mx-10">
+                <div class="px-5 py-2 md:p-5">
                     <h3 class="font-semibold text-gray-800">Эксклюзивный поставщик</h3>
                     <hr class="my-2">
                     <p class="text-gray-700">Весь товар сертифицирован. Широкая сеть партнёров.</p>
                 </div>
-                <div class="p-5">
+                <div class="px-5 py-2 md:p-5">
                     <h3 class="font-semibold text-gray-800">Доставка</h3>
                     <hr class="my-2">
                     <p class="text-gray-700">Оперативная доставка из Азии по всей России.</p>
                 </div>
-                <div class="p-5">
+                <div class="px-5 py-2 md:p-5">
                     <h3 class="font-semibold text-gray-800">Доступно</h3>
                     <hr class="my-2">
                     <p class="text-gray-700">Доступный лизинг. Широкий диапазон цен.</p>
@@ -221,14 +220,14 @@
             </div>
         </section>
 
-        <section class="p-5">
-            <div class="bg-blue-100 p-5 rounded-xl bg-cover" style="background-image: url(/dist/pics/chenlong-bg.jpg);">
-                <div class="grid backdrop-blur-sm backdrop-brightness-75
+        <section class="px-5 pt-5 md:p-5">
+            <div class="bg-blue-100 md:p-5 rounded-xl bg-cover" style="background-image: url(/dist/pics/chenlong-bg.jpg);">
+                <div class="p-5 grid backdrop-blur-sm backdrop-brightness-75
                             rounded-xl w-max h-min p-2 md:p-10">
-                    <h1 class="text-xl md:text-3xl my-auto text-gray-100 font-semibold">
+                    <h1 class="text-2xl md:text-3xl my-auto text-gray-100 font-semibold">
                         Ленточнопильные станки
                     </h1>
-                    <h1 class="text-xl md:text-4xl my-auto text-gray-100 font-semibold">
+                    <h1 class="text-3xl md:text-4xl my-auto text-gray-100 font-semibold">
                         CHENLONG-HEAVY
                     </h1>
                     <a href="/dist/catalog-1" class="hover:underline text-white text-xl my-auto font-semibold">
@@ -238,26 +237,26 @@
             </div>
         </section>
 
-        <section class="p-5 text-gray-700 text-justify">
-            <p class="p-5 text-gray-800 text-xl">
+        <section class="p-5 md:mx-5 text-gray-800 text-justify">
+            <p class="py-5 text-xl">
                 Наша группа компаний является эксклюзивным партнером компании Ченлонг (CHENLONG) по станкам марки Ченлонг Хеви (CHENLONG – HEAVY).
             </p>
-            <p class="p-5">
+            <p class="py-5">
                 &emsp; Станки этой марки были специально разработаны для эксплуатации в тяжелых условиях (при низких температурах,
                 в неотапливаемых, продуваемых помещениях для зимних условий и при высоких летних или закрытых (металлоплавильные производства)
                 производствах с высоким количеством выделяемой энергии и тепла), отличаются особой надежностью работы и долговечностью.
             </p>
-            <p class="p-5">
+            <p class="py-5">
                 &emsp; Станки данной марки хорошо зарекомендовали себя, как при работе в тяжелых условиях, так и при работе в обычных условиях.
                 Эти ленточнопильные станки работают стабильно и надежно на протяжении более 8 лет, поскольку оснащены улучшенными и усиленными комплектующими
                 и почти все имеют в базовой комплектации усиленный коническо-цилиндрический редуктор, индикатор скорости опускания пильной рамы, улучшенные тиски с регулировкой давления
                 и особенными губками, лазерный индикатор реза, и т.д.
             </p>
-            <p class="p-5">
+            <p class="py-5">
                 &emsp; Ниже представлены самые популярные модели станков CHEHLONG – HEAVY, а полный перечень станков,
                 можно найти в разделе <a class="text-blue-600 hover:underline" href="/dist/catalog-1">«Каталог станков»</a>
             </p>
-            <p class="p-5">
+            <p class="py-5">
                 &emsp; Если Вы не нашли в нашем каталоге необходимый по параметрам ленточнопильный станок, предлагаем сделать нам запрос на станок.
                 Мы готовы сделать предложение на любой ленточнопильный станок, в любой комплектации, от небольшого, до специального станка для пиления заготовок диаметром до 3000 мм,
                 от ручного до полностью автоматического станка с рольгангами, включая возможность пиления под разными углами.
@@ -270,20 +269,20 @@
              Размер заготовки: круглый (диаметр до 330 мм), квадратный до 330х330 мм
              Габаритный размер: 2350х2200х1500 мм
         -->
-        <section class="p-2 grid grid-cols-1 md:grid-cols-2">
-            <div class="flex flex-col bg-white rounded-xl">
+        <section class="grid grid-cols-1 md:grid-cols-2 auto-rows-min">
+            <div class="pb-10 md:pb-0 flex flex-col bg-white rounded-xl">
                 <div class="flex flex-row">
                     <div class="h-44 w-44 flex-none row border border-white hover:border-blue-600">
                         <a href="/dist/CH-330HAH">
                             <img src="/dist/pics/product-0-0.jpg">
                         </a>
                     </div>
-                    <div class="flex-1 ml-5">
+                    <div class="flex-1 ml-2">
                         <a href="/dist/CH-330HAH">
                             <h3 class="hover:underline text-gray-800 text-2xl">CH-330HAH</h3>
                         </a>
                         <hr class="my-2">
-                        <ul class="list-disc">
+                        <ul class="list-none">
                             <li>
                                 <h4 class="inline text-gray-800 font-bold">Тип:</h4>
                                 <h4 class="inline text-gray-700">горизонтальный, автоматический</h4>
@@ -306,19 +305,19 @@
                  Размер заготовки: круглый (диаметр до 430 мм), квадратный до 430х430 мм
                  Габаритный размер: 2750х2250х1710 мм
             -->
-            <div class="p-2 flex flex-col bg-white rounded-xl">
+            <div class="pb-10 md:pb-0 p-2 flex flex-col bg-white rounded-xl">
                 <div class="flex flex-row">
                     <div class="h-44 w-44 flex-none row border border-white hover:border-blue-600">
                         <a href="/dist/CH-430HAH">
                             <img src="/dist/pics/product-2-0.jpg">
                         </a>
                     </div>
-                    <div class="flex-1 ml-5">
+                    <div class="flex-1 ml-2">
                         <a href="/dist/CH-430HAH">
                             <h3 class="hover:underline text-gray-900 text-2xl">CH-430HAH</h3>
                         </a>
                         <hr class="my-2">
-                        <ul class="list-disc">
+                        <ul class="list-none">
                             <li>
                                 <h4 class="inline text-gray-800 font-bold">Тип:</h4>
                                 <h4 class="inline text-gray-700">горизонтальный, автоматический</h4>
@@ -329,7 +328,7 @@
                             </li>
                             <li>
                                 <h4 class="inline text-gray-800 font-bold">Габариты:</h4>
-                                <h4 class="inline text-gray-700">2750x2250x1710 мм</h4>
+                                <h4 class="inline text-gray-700">2750x2250x1710мм</h4>
                             </li>
                         </ul>
                     </div>
@@ -340,22 +339,22 @@
                  Особенности: дополнительно оснащен ШВП
                  Габаритный размер: 2750х3500х2540 мм
                  -->
-            <div class="p-2 flex flex-col bg-white rounded-xl">
+            <div class="pb-10 md:pb-0 p-2 flex flex-col bg-white rounded-xl">
                 <div class="flex flex-row">
                     <div class="h-44 w-44 flex-none row border border-white hover:border-blue-600">
                         <a href="/dist/CH-450NCH">
                             <img src="/dist/pics/product-19-0.jpg">
                         </a>
                     </div>
-                    <div class="flex-1 ml-5">
+                    <div class="flex-1 ml-2">
                         <a href="/dist/CH-450NCH">
                             <h3 class="hover:underline text-gray-900 text-2xl">CH-450NCH</h3>
                         </a>
                         <hr class="my-2">
-                        <ul class="list-disc">
+                        <ul class="list-none">
                             <li>
                                 <h4 class="inline text-gray-800 font-bold">Тип:</h4>
-                                <h4 class="inline text-gray-700">Горизонтальный, автоматический</h4>
+                                <h4 class="inline text-gray-700">горизонтальный, автоматический</h4>
                             </li>
                             <li>
                                 <h4 class="inline text-gray-800 font-bold">Заготовка:</h4>
@@ -363,7 +362,7 @@
                             </li>
                             <li>
                                 <h4 class="inline text-gray-800 font-bold">Габариты:</h4>
-                                <h4 class="inline text-gray-700">2750x3500x2540 мм</h4>
+                                <h4 class="inline text-gray-700">2750x3500x2540мм</h4>
                             </li>
                             <li>
                                 <h4 class="inline text-gray-800 font-bold">Оснащён ШВП</h4>
@@ -377,30 +376,30 @@
                  Размер заготовки: круглый (диаметр до 800 мм), квадратный до 800х800 мм
                  Габаритный размер: 4130х2150х2500 мм
             -->
-            <div class="p-2 flex flex-col bg-white rounded-xl">
+            <div class="pb-10 md:pb-0 p-2 flex flex-col bg-white rounded-xl">
                 <div class="flex flex-row">
                     <div class="h-44 w-44 flex-none row border border-white hover:border-blue-600">
                         <a href="/dist/CH-800H">
                             <img src="/dist/pics/product-14-0.jpg">
                         </a>
                     </div>
-                    <div class="flex-1 ml-5">
+                    <div class="flex-1 ml-2">
                         <a href="/dist/CH-800H">
                             <h3 class="hover:underline text-gray-900 text-2xl">CH-800H</h3>
                         </a>
                         <hr class="my-2">
-                        <ul class="list-disc">
+                        <ul class="list-none">
                             <li>
                                 <h4 class="inline text-gray-800 font-bold">Тип:</h4>
-                                <h4 class="inline text-gray-700">Горизонтальный, полуавтоматический</h4>
+                                <h4 class="inline text-gray-700">горизонтальный, полуавтоматический</h4>
                             </li>
                             <li>
                                 <h4 class="inline text-gray-800 font-bold">Заготовка:</h4>
-                                <h4 class="inline text-gray-700">⌀800 мм, ▢800x800 мм</h4>
+                                <h4 class="inline text-gray-700">⌀800мм, ▢800x800мм</h4>
                             </li>
                             <li>
                                 <h4 class="inline text-gray-800 font-bold">Габариты:</h4>
-                                <h4 class="inline text-gray-700">4310x2150x2500 мм</h4>
+                                <h4 class="inline text-gray-700">4310x2150x2500мм</h4>
                             </li>
                         </ul>
                     </div>
@@ -424,29 +423,28 @@
 
         <section class="p-5">
             <div class="flex flex-col">
-                <div class="p-5 flex flex-col md:flex-row">
-                    <div class="md:p-5 text-justify">
+                <div class="md:px-5 flex flex-col md:flex-row">
+                    <div class="md:px-5 text-justify">
                         <a href="/dist/catalog-2">
                             <h3 class="hover:underline font-semibold text-gray-800 text-xl">Ленточные пилы</h3>
                         </a>
                         <hr class="my-2">
-                        <p class="text-gray-700 my-2">
+                        <p class="text-gray-800 my-2">
                             &emsp; Наша компания производит ленточные пилы под любые задачи и почти под любой бюджет. Мы работаем только с полотнами известных производителей, на которых имеется информация и о типе полотна, типе и шаге зуба и о самом производителе полотна. Эта информация дает определенные гарантии покупателю в качестве и стойкости ленточной пилы.
                         </p>
-                        <p class="text-gray-700 my-2">
-                            &emsp; Компания обладает большим, пополняемым, складом ленточного полотна (более 150.000 метров) и готова изготовить заказ по ленточным пилам от нескольких часов. Наш цех по производству пил оснащен четырьмя сварочными станками от компании Идеал (Ideal) Германия и изготавливает более 10.000 пил в месяц.
-                        </p>
-                        <p class="text-gray-700 my-2">
-                            &emsp; По запросу, мы готовы подобрать пилы для выполнения любой задачи пиления и быстро их изготовить.
-                        </p>
                     </div>
-
-                    <img src="/dist/pics/bandsaw_image_1.jpg" class="rounded w-96 h-44 m-5">
+                    <img src="/dist/pics/bandsaw_image_1.jpg" class="rounded md:w-96 md:h-44 m-5">
                 </div>
+                <p class="md:px-10 text-justify text-gray-800 my-2">
+                    &emsp; Компания обладает большим, пополняемым, складом ленточного полотна (более 150.000 метров) и готова изготовить заказ по ленточным пилам от нескольких часов. Наш цех по производству пил оснащен четырьмя сварочными станками от компании Идеал (Ideal) Германия и изготавливает более 10.000 пил в месяц.
+                </p>
+                <p class="md:px-10 text-justify text-gray-800 my-2">
+                    &emsp; По запросу, мы готовы подобрать пилы для выполнения любой задачи пиления и быстро их изготовить.
+                </p>
             </div>
         </section>
 
-        <section class="p-2 md:p-10 pb-20 flex flex-col md:flex-row justify-around">
+        <section class="p-2 pb-10 md:p-10 md:pb-20 flex flex-col md:flex-row justify-around">
             <div>
                 <h1 class="text-gray-800 text-2xl font-semibold p-5 hidden md:block">Остались вопросы?</h1>
             </div>
@@ -454,7 +452,7 @@
             <div x-data="{ modal: false }" class="grid">
 
                 <div x-show="modal" class="fixed z-50 inset-0 h-screen w-screen bg-opacity-75 bg-gray-300 grid place-items-center">
-    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-3/5 md:w-2/5 md:h-4/5">
+    <div class="bg-white p-2 md:p-5 rounded shadow-xl h-max-screen w-max-screen w-full h-full md:w-2/5 md:h-4/5">
         <div @click.outside="modal=false" class="flex flex-col justify-between h-full w-full">
             <label class="text-gray-700 m-2">Ваши контакты:</label>
             <input placeholder="Телефон (обязательно)" class="text-gray-800 p-2 border hover:border-blue-900 rounded m-2" type="text">
